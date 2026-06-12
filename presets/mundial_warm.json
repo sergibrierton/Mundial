@@ -1,0 +1,34 @@
+{
+  "name": "Mundial Warm",
+  "description": "Look calido y cinematografico, piel favorecedora, contraste medio. Versatil para retrato y ambiente.",
+
+  "auto_white_balance": true,
+  "auto_white_balance_strength": 0.7,
+  "auto_exposure": true,
+  "auto_exposure_target": 0.44,
+  "auto_exposure_strength": 0.7,
+
+  "exposure": 0.08,
+  "temp": 8,
+  "tint": 2,
+  "contrast": 14,
+  "highlights": -22,
+  "shadows": 18,
+  "whites": 4,
+  "blacks": -10,
+  "vibrance": 14,
+  "saturation": 0,
+
+  "split_shadows": [0.30, 0.40, 0.55],
+  "split_shadows_strength": 0.06,
+  "split_highlights": [1.0, 0.88, 0.62],
+  "split_highlights_strength": 0.08,
+
+  "tone_curve": [[0.0, 0.04], [0.25, 0.23], [0.5, 0.51], [0.75, 0.79], [1.0, 0.97]],
+  "vignette": 0.14,
+  "grain": 0.015,
+
+  "lut": null,
+  "lut_strength": 1.0,
+  "sharpen": 0.6
+}

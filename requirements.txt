@@ -1,0 +1,8 @@
+numpy>=1.24
+Pillow>=10.0
+rawpy>=0.18
+
+# Opcional: deteccion de caras para elegir la mejor foto de cada rafaga.
+# Si no se instala, el resto de criterios (enfoque, exposicion...) siguen
+# funcionando.
+opencv-python-headless>=4.8

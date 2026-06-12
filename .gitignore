@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Salidas y material de trabajo
+editadas/
+seleccionadas/
+test_*/
+*.ARW
+*.arw
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+
+# Excepciones: ejemplos que si queremos versionar
+!assets/*.png
+!docs/*.png

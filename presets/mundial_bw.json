@@ -1,0 +1,29 @@
+{
+  "name": "Mundial B/N",
+  "description": "Blanco y negro con contraste y grano, estilo reportaje nocturno.",
+
+  "auto_white_balance": true,
+  "auto_white_balance_strength": 0.5,
+  "auto_exposure": true,
+  "auto_exposure_target": 0.42,
+  "auto_exposure_strength": 0.7,
+
+  "exposure": 0.05,
+  "temp": 0,
+  "tint": 0,
+  "contrast": 26,
+  "highlights": -24,
+  "shadows": 20,
+  "whites": 8,
+  "blacks": -18,
+  "vibrance": 0,
+  "saturation": -100,
+
+  "tone_curve": [[0.0, 0.02], [0.25, 0.20], [0.5, 0.5], [0.75, 0.82], [1.0, 0.99]],
+  "vignette": 0.22,
+  "grain": 0.04,
+
+  "lut": null,
+  "lut_strength": 1.0,
+  "sharpen": 0.8
+}
