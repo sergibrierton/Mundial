@@ -1,0 +1,9 @@
+# Datos crudos y base de datos (regenerables con `python run_all.py`)
+data/raw/
+data/*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
