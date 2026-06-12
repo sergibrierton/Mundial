@@ -1,73 +1,73 @@
 date,group,home,away,p_home,p_draw,p_away,xg_home,xg_away,likely_score,likely_score_pct,prediction
-2026-06-11,A,Mexico,South Africa,81.6,13.2,5.2,2.66,0.56,2-0,14.2,Gana Mexico
-2026-06-11,A,South Korea,Czech Republic,50.6,26.8,22.5,1.55,0.95,1-1,12.7,Gana South Korea
-2026-06-12,B,Canada,Bosnia and Herzegovina,73.0,18.0,8.9,2.24,0.66,2-0,13.8,Gana Canada
-2026-06-12,D,United States,Paraguay,36.4,28.9,34.7,1.23,1.2,1-1,13.7,Gana United States
-2026-06-13,B,Qatar,Switzerland,5.9,14.3,79.8,0.58,2.56,0-2,14.2,Gana Switzerland
-2026-06-13,C,Brazil,Morocco,43.4,28.3,28.3,1.38,1.07,1-1,13.4,Gana Brazil
-2026-06-13,C,Haiti,Scotland,19.4,25.6,55.1,0.89,1.66,0-1,12.3,Gana Scotland
-2026-06-13,D,Australia,Turkey,28.2,28.3,43.6,1.07,1.39,1-1,13.4,Gana Turkey
-2026-06-14,E,Germany,Curaçao,83.2,12.2,4.6,2.76,0.54,2-0,14.1,Gana Germany
-2026-06-14,E,Ivory Coast,Ecuador,15.7,23.6,60.7,0.81,1.82,0-1,12.5,Gana Ecuador
-2026-06-14,F,Netherlands,Japan,37.5,28.8,33.6,1.26,1.18,1-1,13.7,Gana Netherlands
-2026-06-14,F,Sweden,Tunisia,40.6,28.6,30.8,1.32,1.12,1-1,13.6,Gana Sweden
-2026-06-15,G,Belgium,Egypt,53.5,26.0,20.4,1.62,0.91,1-1,12.4,Gana Belgium
-2026-06-15,G,Iran,New Zealand,55.9,25.3,18.8,1.69,0.88,1-0,12.4,Gana Iran
-2026-06-15,H,Spain,Cape Verde,93.3,5.3,1.3,3.73,0.4,3-0,14.0,Gana Spain
-2026-06-15,H,Saudi Arabia,Uruguay,11.2,20.3,68.5,0.71,2.07,0-2,13.2,Gana Uruguay
-2026-06-16,I,France,Senegal,62.2,23.0,14.8,1.87,0.79,1-0,12.5,Gana France
-2026-06-16,I,Iraq,Norway,13.3,22.0,64.8,0.76,1.95,0-2,12.7,Gana Norway
-2026-06-16,J,Argentina,Algeria,72.1,18.5,9.4,2.21,0.67,2-0,13.7,Gana Argentina
-2026-06-16,J,Austria,Jordan,50.1,27.0,22.9,1.54,0.96,1-1,12.8,Gana Austria
-2026-06-17,K,Portugal,DR Congo,70.4,19.4,10.3,2.14,0.69,2-0,13.5,Gana Portugal
-2026-06-17,K,Uzbekistan,Colombia,13.7,22.3,64.1,0.77,1.92,0-2,12.5,Gana Colombia
-2026-06-17,L,England,Croatia,50.5,26.9,22.6,1.55,0.95,1-1,12.7,Gana England
-2026-06-17,L,Ghana,Panama,14.2,22.7,63.1,0.78,1.89,0-1,12.5,Gana Panama
-2026-06-18,A,Czech Republic,South Africa,50.8,26.8,22.4,1.56,0.95,1-1,12.7,Gana Czech Republic
-2026-06-18,A,Mexico,South Korea,53.8,26.0,20.3,1.63,0.91,1-1,12.3,Gana Mexico
-2026-06-18,B,Switzerland,Bosnia and Herzegovina,72.0,18.6,9.4,2.2,0.67,2-0,13.7,Gana Switzerland
-2026-06-18,B,Canada,Qatar,80.7,13.8,5.6,2.61,0.57,2-0,14.2,Gana Canada
-2026-06-19,C,Scotland,Morocco,20.7,26.2,53.2,0.92,1.62,1-1,12.4,Gana Morocco
-2026-06-19,C,Brazil,Haiti,79.0,14.8,6.3,2.51,0.59,2-0,14.2,Gana Brazil
-2026-06-19,D,United States,Australia,37.3,28.8,33.8,1.25,1.18,1-1,13.7,Gana United States
-2026-06-19,D,Turkey,Paraguay,42.6,28.4,29.0,1.37,1.08,1-1,13.5,Gana Turkey
-2026-06-20,E,Germany,Ivory Coast,60.1,23.9,16.1,1.8,0.82,1-0,12.5,Gana Germany
-2026-06-20,E,Ecuador,Curaçao,83.6,11.9,4.4,2.78,0.53,2-0,14.1,Gana Ecuador
-2026-06-20,F,Netherlands,Sweden,65.2,21.8,13.0,1.96,0.75,2-0,12.7,Gana Netherlands
-2026-06-20,F,Tunisia,Japan,11.4,20.4,68.2,0.72,2.06,0-2,13.2,Gana Japan
-2026-06-21,G,Belgium,Iran,42.3,28.4,29.2,1.36,1.09,1-1,13.5,Gana Belgium
-2026-06-21,G,New Zealand,Egypt,27.3,28.1,44.6,1.05,1.41,1-1,13.3,Gana Egypt
-2026-06-21,H,Spain,Saudi Arabia,90.7,7.2,2.1,3.38,0.44,3-0,14.2,Gana Spain
-2026-06-21,H,Uruguay,Cape Verde,74.1,17.5,8.4,2.29,0.65,2-0,13.9,Gana Uruguay
-2026-06-22,I,France,Iraq,80.5,13.9,5.6,2.6,0.57,2-0,14.2,Gana France
-2026-06-22,I,Norway,Senegal,44.1,28.2,27.8,1.4,1.06,1-1,13.4,Gana Norway
-2026-06-22,J,Argentina,Austria,70.9,19.1,10.0,2.16,0.69,2-0,13.6,Gana Argentina
-2026-06-22,J,Jordan,Algeria,24.0,27.3,48.7,0.98,1.5,1-1,13.0,Gana Algeria
-2026-06-23,K,Portugal,Uzbekistan,62.4,22.9,14.6,1.87,0.79,1-0,12.5,Gana Portugal
-2026-06-23,K,Colombia,DR Congo,71.9,18.6,9.5,2.2,0.67,2-0,13.7,Gana Colombia
-2026-06-23,L,England,Ghana,87.6,9.4,3.1,3.07,0.48,3-0,13.8,Gana England
-2026-06-23,L,Panama,Croatia,22.6,26.9,50.5,0.95,1.55,1-1,12.8,Gana Croatia
-2026-06-24,A,Mexico,Czech Republic,68.8,20.2,11.1,2.08,0.71,2-0,13.3,Gana Mexico
-2026-06-24,A,South Africa,South Korea,12.6,21.4,66.0,0.75,1.98,0-2,12.8,Gana South Korea
-2026-06-24,B,Canada,Switzerland,36.7,28.9,34.5,1.24,1.19,1-1,13.7,Gana Canada
-2026-06-24,B,Bosnia and Herzegovina,Qatar,44.7,28.1,27.2,1.41,1.05,1-1,13.3,Gana Bosnia and Herzegovina
-2026-06-24,C,Scotland,Brazil,15.3,23.4,61.3,0.8,1.84,0-1,12.5,Gana Brazil
-2026-06-24,C,Morocco,Haiti,72.2,18.5,9.3,2.21,0.67,2-0,13.7,Gana Morocco
-2026-06-25,D,United States,Turkey,29.8,28.5,41.7,1.1,1.35,1-1,13.5,Gana Turkey
-2026-06-25,D,Paraguay,Australia,36.5,28.9,34.7,1.23,1.2,1-1,13.7,Gana Paraguay
-2026-06-25,E,Curaçao,Ivory Coast,14.9,23.1,62.0,0.8,1.86,0-1,12.5,Gana Ivory Coast
-2026-06-25,E,Ecuador,Germany,36.2,28.9,35.0,1.23,1.2,1-1,13.7,Gana Ecuador
-2026-06-25,F,Japan,Sweden,63.2,22.6,14.2,1.9,0.78,1-0,12.5,Gana Japan
-2026-06-25,F,Tunisia,Netherlands,10.4,19.5,70.1,0.69,2.13,0-2,13.5,Gana Netherlands
-2026-06-26,G,Egypt,Iran,25.8,27.8,46.4,1.02,1.45,1-1,13.2,Gana Iran
-2026-06-26,G,New Zealand,Belgium,14.4,22.7,62.9,0.78,1.89,0-1,12.5,Gana Belgium
-2026-06-26,H,Cape Verde,Saudi Arabia,29.9,28.5,41.6,1.1,1.34,1-1,13.5,Gana Saudi Arabia
-2026-06-26,H,Uruguay,Spain,12.6,21.5,65.9,0.75,1.98,0-2,12.8,Gana Spain
-2026-06-26,I,Norway,France,20.5,26.1,53.4,0.91,1.62,1-1,12.4,Gana France
-2026-06-26,I,Senegal,Iraq,56.1,25.2,18.6,1.69,0.87,1-0,12.4,Gana Senegal
-2026-06-27,J,Algeria,Austria,34.2,28.8,36.9,1.19,1.24,1-1,13.7,Gana Austria
-2026-06-27,J,Jordan,Argentina,4.7,12.4,82.8,0.54,2.73,0-2,14.1,Gana Argentina
-2026-06-27,K,Colombia,Portugal,37.2,28.8,34.0,1.25,1.18,1-1,13.7,Gana Colombia
-2026-06-27,K,DR Congo,Uzbekistan,28.1,28.2,43.7,1.06,1.39,1-1,13.4,Gana Uzbekistan
-2026-06-27,L,Panama,England,12.7,21.6,65.7,0.75,1.98,0-2,12.8,Gana England
-2026-06-27,L,Croatia,Ghana,76.9,16.0,7.2,2.41,0.61,2-0,14.1,Gana Croatia
+2026-06-11,A,Mexico,South Africa,81.2,13.5,5.4,2.63,0.56,2-0,14.2,Gana Mexico
+2026-06-11,A,South Korea,Czech Republic,49.8,27.0,23.2,1.53,0.97,1-1,12.8,Gana South Korea
+2026-06-12,B,Canada,Bosnia and Herzegovina,71.4,18.9,9.7,2.18,0.68,2-0,13.6,Gana Canada
+2026-06-12,D,United States,Paraguay,36.9,28.8,34.3,1.24,1.19,1-1,13.7,Gana United States
+2026-06-13,B,Qatar,Switzerland,5.7,13.9,80.5,0.57,2.59,0-2,14.2,Gana Switzerland
+2026-06-13,C,Brazil,Morocco,43.8,28.2,27.9,1.39,1.06,1-1,13.4,Gana Brazil
+2026-06-13,C,Haiti,Scotland,18.8,25.3,55.9,0.88,1.69,0-1,12.4,Gana Scotland
+2026-06-13,D,Australia,Turkey,26.7,28.0,45.3,1.04,1.43,1-1,13.3,Gana Turkey
+2026-06-14,E,Germany,Curaçao,84.4,11.4,4.1,2.84,0.52,2-0,14.0,Gana Germany
+2026-06-14,E,Ivory Coast,Ecuador,17.0,24.4,58.6,0.84,1.76,0-1,12.5,Gana Ecuador
+2026-06-14,F,Netherlands,Japan,39.8,28.7,31.5,1.31,1.13,1-1,13.6,Gana Netherlands
+2026-06-14,F,Sweden,Tunisia,42.3,28.4,29.3,1.36,1.09,1-1,13.5,Gana Sweden
+2026-06-15,G,Belgium,Egypt,57.4,24.8,17.8,1.73,0.86,1-0,12.4,Gana Belgium
+2026-06-15,G,Iran,New Zealand,54.7,25.7,19.6,1.65,0.89,1-0,12.3,Gana Iran
+2026-06-15,H,Spain,Cape Verde,95.2,3.9,0.9,4.06,0.36,4-0,13.6,Gana Spain
+2026-06-15,H,Saudi Arabia,Uruguay,10.7,19.8,69.6,0.7,2.11,0-2,13.4,Gana Uruguay
+2026-06-16,I,France,Senegal,64.3,22.1,13.5,1.93,0.77,2-0,12.6,Gana France
+2026-06-16,I,Iraq,Norway,11.0,20.1,68.9,0.71,2.09,0-2,13.3,Gana Norway
+2026-06-16,J,Argentina,Algeria,73.7,17.7,8.6,2.27,0.65,2-0,13.9,Gana Argentina
+2026-06-16,J,Austria,Jordan,53.3,26.1,20.6,1.62,0.91,1-1,12.4,Gana Austria
+2026-06-17,K,Portugal,DR Congo,74.6,17.2,8.2,2.31,0.64,2-0,14.0,Gana Portugal
+2026-06-17,K,Uzbekistan,Colombia,13.1,21.8,65.0,0.76,1.95,0-2,12.7,Gana Colombia
+2026-06-17,L,England,Croatia,51.1,26.7,22.2,1.56,0.95,1-1,12.7,Gana England
+2026-06-17,L,Ghana,Panama,14.1,22.6,63.3,0.78,1.9,0-1,12.5,Gana Panama
+2026-06-18,A,Czech Republic,South Africa,53.6,26.0,20.4,1.63,0.91,1-1,12.4,Gana Czech Republic
+2026-06-18,A,Mexico,South Korea,51.1,26.7,22.2,1.56,0.95,1-1,12.7,Gana Mexico
+2026-06-18,B,Switzerland,Bosnia and Herzegovina,72.6,18.3,9.1,2.23,0.66,2-0,13.8,Gana Switzerland
+2026-06-18,B,Canada,Qatar,79.4,14.5,6.1,2.54,0.58,2-0,14.2,Gana Canada
+2026-06-19,C,Scotland,Morocco,21.4,26.4,52.2,0.93,1.59,1-1,12.5,Gana Morocco
+2026-06-19,C,Brazil,Haiti,79.2,14.6,6.2,2.53,0.59,2-0,14.2,Gana Brazil
+2026-06-19,D,United States,Australia,35.3,28.9,35.9,1.21,1.22,1-1,13.7,Gana Australia
+2026-06-19,D,Turkey,Paraguay,47.0,27.7,25.3,1.47,1.01,1-1,13.1,Gana Turkey
+2026-06-20,E,Germany,Ivory Coast,62.0,23.1,14.9,1.86,0.8,1-0,12.5,Gana Germany
+2026-06-20,E,Ecuador,Curaçao,82.1,12.9,5.0,2.69,0.55,2-0,14.2,Gana Ecuador
+2026-06-20,F,Netherlands,Sweden,68.3,20.4,11.3,2.06,0.72,2-0,13.2,Gana Netherlands
+2026-06-20,F,Tunisia,Japan,10.1,19.2,70.7,0.69,2.15,0-2,13.5,Gana Japan
+2026-06-21,G,Belgium,Iran,44.5,28.1,27.4,1.41,1.05,1-1,13.3,Gana Belgium
+2026-06-21,G,New Zealand,Egypt,29.7,28.5,41.9,1.1,1.35,1-1,13.5,Gana Egypt
+2026-06-21,H,Spain,Saudi Arabia,93.2,5.4,1.4,3.7,0.4,3-0,14.0,Gana Spain
+2026-06-21,H,Uruguay,Cape Verde,74.7,17.1,8.1,2.31,0.64,2-0,14.0,Gana Uruguay
+2026-06-22,I,France,Iraq,82.5,12.6,4.9,2.71,0.55,2-0,14.2,Gana France
+2026-06-22,I,Norway,Senegal,47.9,27.5,24.7,1.49,1.0,1-1,13.0,Gana Norway
+2026-06-22,J,Argentina,Austria,69.2,20.0,10.9,2.1,0.71,2-0,13.3,Gana Argentina
+2026-06-22,J,Jordan,Algeria,24.4,27.4,48.2,0.99,1.49,1-1,13.0,Gana Algeria
+2026-06-23,K,Portugal,Uzbekistan,67.0,21.0,12.0,2.02,0.73,2-0,13.0,Gana Portugal
+2026-06-23,K,Colombia,DR Congo,72.8,18.2,9.1,2.23,0.66,2-0,13.8,Gana Colombia
+2026-06-23,L,England,Ghana,89.2,8.3,2.5,3.22,0.46,3-0,14.1,Gana England
+2026-06-23,L,Panama,Croatia,20.9,26.3,52.8,0.92,1.61,1-1,12.5,Gana Croatia
+2026-06-24,A,Mexico,Czech Republic,65.5,21.6,12.9,1.97,0.75,2-0,12.8,Gana Mexico
+2026-06-24,A,South Africa,South Korea,11.6,20.6,67.9,0.72,2.05,0-2,13.1,Gana South Korea
+2026-06-24,B,Canada,Switzerland,34.3,28.8,36.8,1.19,1.24,1-1,13.7,Gana Switzerland
+2026-06-24,B,Bosnia and Herzegovina,Qatar,44.9,28.1,27.1,1.42,1.04,1-1,13.3,Gana Bosnia and Herzegovina
+2026-06-24,C,Scotland,Brazil,15.6,23.6,60.8,0.81,1.82,0-1,12.5,Gana Brazil
+2026-06-24,C,Morocco,Haiti,72.1,18.5,9.4,2.2,0.67,2-0,13.7,Gana Morocco
+2026-06-25,D,United States,Turkey,26.4,27.9,45.6,1.03,1.43,1-1,13.3,Gana Turkey
+2026-06-25,D,Paraguay,Australia,34.0,28.8,37.2,1.18,1.25,1-1,13.7,Gana Australia
+2026-06-25,E,Curaçao,Ivory Coast,15.0,23.2,61.9,0.8,1.85,0-1,12.5,Gana Ivory Coast
+2026-06-25,E,Ecuador,Germany,32.4,28.8,38.8,1.15,1.28,1-1,13.7,Gana Germany
+2026-06-25,F,Japan,Sweden,64.1,22.3,13.7,1.92,0.77,2-0,12.5,Gana Japan
+2026-06-25,F,Tunisia,Netherlands,8.2,17.2,74.6,0.64,2.31,0-2,14.0,Gana Netherlands
+2026-06-26,G,Egypt,Iran,24.5,27.4,48.1,0.99,1.49,1-1,13.0,Gana Iran
+2026-06-26,G,New Zealand,Belgium,13.8,22.3,63.9,0.77,1.92,0-2,12.5,Gana Belgium
+2026-06-26,H,Cape Verde,Saudi Arabia,30.3,28.6,41.1,1.11,1.33,1-1,13.6,Gana Saudi Arabia
+2026-06-26,H,Uruguay,Spain,10.3,19.4,70.3,0.69,2.13,0-2,13.5,Gana Spain
+2026-06-26,I,Norway,France,21.7,26.5,51.8,0.94,1.58,1-1,12.6,Gana France
+2026-06-26,I,Senegal,Iraq,56.7,25.1,18.3,1.71,0.87,1-0,12.4,Gana Senegal
+2026-06-27,J,Algeria,Austria,31.0,28.6,40.4,1.12,1.32,1-1,13.6,Gana Austria
+2026-06-27,J,Jordan,Argentina,4.4,11.9,83.7,0.53,2.79,0-2,14.1,Gana Argentina
+2026-06-27,K,Colombia,Portugal,33.6,28.8,37.5,1.18,1.26,1-1,13.7,Gana Portugal
+2026-06-27,K,DR Congo,Uzbekistan,28.1,28.2,43.6,1.06,1.39,1-1,13.4,Gana Uzbekistan
+2026-06-27,L,Panama,England,11.3,20.4,68.3,0.72,2.06,0-2,13.2,Gana England
+2026-06-27,L,Croatia,Ghana,78.8,14.8,6.3,2.51,0.59,2-0,14.2,Gana Croatia

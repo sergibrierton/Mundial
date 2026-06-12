@@ -33,6 +33,45 @@ def write_group_predictions(pred_df):
     (OUTPUT_DIR / "group_stage_predictions.md").write_text("\n".join(lines), encoding="utf-8")
 
 
+def write_exact_predictions(exact_df):
+    """Marcadores exactos de los 72 partidos (Markdown + CSV)."""
+    exact_df.to_csv(OUTPUT_DIR / "group_stage_exact_results.csv", index=False)
+    L = ["# 🎯 Marcadores exactos previstos — Fase de grupos (Mundial 2026)\n",
+         "Marcador **exacto más probable** de cada partido (modal de la distribución "
+         "de Poisson), con marcadores alternativos, probabilidades 1-X-2, goles "
+         "esperados (xG) y goleadores más probables de cada selección.\n",
+         "> Aviso: el marcador exacto es de baja probabilidad por naturaleza "
+         "(~12–18%). Es el resultado **individual más probable**; el pronóstico "
+         "1-X-2 es mucho más fiable.\n"]
+    for g in GROUP_LETTERS:
+        sub = exact_df[exact_df.group == g]
+        L.append(f"\n## Grupo {g}\n")
+        L.append("| Fecha | Partido | **Resultado** | Prob. | Alternativos | 1 / X / 2 | xG | Goleadores probables |")
+        L.append("|---|---|---|---|---|---|---|---|")
+        for _, r in sub.iterrows():
+            L.append(
+                f"| {r.date} | {r.home} – {r.away} | **{r.exact_score}** | "
+                f"{r.exact_prob}% | {r.alt_scores} | {r.p_home}/{r.p_draw}/{r.p_away} | "
+                f"{r.xg_home:.1f}-{r.xg_away:.1f} | {r.scorer_home} vs {r.scorer_away} |")
+    (OUTPUT_DIR / "group_stage_exact_results.md").write_text("\n".join(L), encoding="utf-8")
+
+
+def write_players(players_summary):
+    """Análisis jugador a jugador por selección."""
+    players_summary.to_csv(OUTPUT_DIR / "player_analysis.csv", index=False)
+    df = players_summary.sort_values("elo_adj", ascending=False)
+    L = ["# 👤 Análisis jugador a jugador (forma ofensiva 2022–2026)\n",
+         "Goleadores activos de cada selección (goles internacionales desde 2022), "
+         "índice de amenaza ofensiva, dependencia de la estrella y el ajuste de "
+         "rating que aporta la calidad goleadora de la plantilla.\n",
+         "| Selección | Ajuste Elo | Estrella | Goles | Dependencia | Goleadores activos (goles) |",
+         "|---|---|---|---|---|---|"]
+    for _, r in df.iterrows():
+        L.append(f"| {r.team} | {r.elo_adj:+.0f} | {r.star} | {r.star_goals} | "
+                 f"{int(r.star_reliance*100)}% | {r.top_scorers} |")
+    (OUTPUT_DIR / "player_analysis.md").write_text("\n".join(L), encoding="utf-8")
+
+
 def write_forecast(sim_df):
     sim_df.to_csv(OUTPUT_DIR / "tournament_forecast.csv", index=False)
 
