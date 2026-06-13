@@ -22,8 +22,6 @@ import numpy as np
 from scipy.optimize import minimize
 from scipy.stats import poisson
 
-from config import ELO_HOME_ADV
-
 
 def _dc_tau(h, a, lam, mu, rho):
     """Factor de corrección de Dixon-Coles para marcadores bajos."""
@@ -86,15 +84,17 @@ class GoalModel:
         return model
 
     # ---- predicción ----
-    def lambdas(self, elo_home, elo_away, ha_side):
-        dr = elo_home - elo_away + ha_side * ELO_HOME_ADV
+    # ha_points: ventaja del local en puntos Elo (ya incluye ventaja de campo
+    # y, en su caso, bonus de anfitrión). 0 = sede neutral.
+    def lambdas(self, elo_home, elo_away, ha_points):
+        dr = elo_home - elo_away + ha_points
         x = self.b * dr
         lam = math.exp(self.a + x)
         mu = math.exp(self.a - x)
         return lam, mu
 
-    def score_matrix(self, elo_home, elo_away, ha_side, max_goals=10):
-        lam, mu = self.lambdas(elo_home, elo_away, ha_side)
+    def score_matrix(self, elo_home, elo_away, ha_points, max_goals=10):
+        lam, mu = self.lambdas(elo_home, elo_away, ha_points)
         ph = poisson.pmf(np.arange(max_goals + 1), lam)
         pa = poisson.pmf(np.arange(max_goals + 1), mu)
         m = np.outer(ph, pa)
@@ -106,8 +106,8 @@ class GoalModel:
         m /= m.sum()
         return m, lam, mu
 
-    def outcome_probs(self, elo_home, elo_away, ha_side, max_goals=10):
-        m, lam, mu = self.score_matrix(elo_home, elo_away, ha_side, max_goals)
+    def outcome_probs(self, elo_home, elo_away, ha_points, max_goals=10):
+        m, lam, mu = self.score_matrix(elo_home, elo_away, ha_points, max_goals)
         p_home = np.tril(m, -1).sum()   # local marca más
         p_draw = np.trace(m)
         p_away = np.triu(m, 1).sum()

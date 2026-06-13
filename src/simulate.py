@@ -21,7 +21,7 @@ from functools import lru_cache
 import numpy as np
 
 from config import (
-    GROUPS, GROUP_LETTERS, all_teams, HOSTS, ELO_HOME_ADV, HOST_KO_BONUS,
+    GROUPS, GROUP_LETTERS, all_teams, HOSTS, HOST_KO_EXTRA,
     ELO_SIM_SIGMA, R32, R16, QF, SF, THIRD_PLACE_SLOTS, THIRD_PLACE_MATCH,
     FINAL_MATCH,
 )
@@ -98,7 +98,7 @@ class TournamentSimulator:
         ea = self.elo_sim[self.rows, ida]
         dr = eh - ea
         if host_neutral:
-            dr = dr + HOST_KO_BONUS * ELO_HOME_ADV * (self.host[idh] - self.host[ida])
+            dr = dr + HOST_KO_EXTRA * (self.host[idh] - self.host[ida])
         lam, mu = self._lambdas(dr)
         gh = self.rng.poisson(lam)
         ga = self.rng.poisson(mu)
@@ -135,12 +135,17 @@ class TournamentSimulator:
             for fx in fx_by_group[g]:
                 i = local[fx["home"]]
                 j = local[fx["away"]]
-                eh = self.elo_sim[:, gid[i]]
-                ea = self.elo_sim[:, gid[j]]
-                dr = eh - ea + fx["ha_side"] * ELO_HOME_ADV
-                lam, mu = self._lambdas(dr)
-                hg = self.rng.poisson(lam)
-                ag = self.rng.poisson(mu)
+                if fx.get("played"):
+                    # Resultado real: hecho consumado, no se muestrea.
+                    hg = np.full(N, int(fx["home_score"]))
+                    ag = np.full(N, int(fx["away_score"]))
+                else:
+                    eh = self.elo_sim[:, gid[i]]
+                    ea = self.elo_sim[:, gid[j]]
+                    dr = eh - ea + fx["ha_points"]
+                    lam, mu = self._lambdas(dr)
+                    hg = self.rng.poisson(lam)
+                    ag = self.rng.poisson(mu)
                 hw = hg > ag
                 aw = ag > hg
                 dr_tie = hg == ag

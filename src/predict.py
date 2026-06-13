@@ -18,13 +18,16 @@ def predict_group_matches(ratings, model, fixtures):
     for fx in fixtures:
         eh = ratings.get(fx["home"], ELO_INITIAL)
         ea = ratings.get(fx["away"], ELO_INITIAL)
-        out = model.outcome_probs(eh, ea, fx["ha_side"])
+        out = model.outcome_probs(eh, ea, fx["ha_points"])
         ls = out["likely_score"]
+        played = fx.get("played")
         rows.append({
             "date": fx["date"],
             "group": fx["grp"],
             "home": fx["home"],
             "away": fx["away"],
+            "status": "JUGADO" if played else "pendiente",
+            "real_score": f"{fx['home_score']}-{fx['away_score']}" if played else "",
             "p_home": round(out["p_home"] * 100, 1),
             "p_draw": round(out["p_draw"] * 100, 1),
             "p_away": round(out["p_away"] * 100, 1),
@@ -43,7 +46,7 @@ def predict_exact(ratings, model, fixtures, team_players):
     for fx in fixtures:
         eh = ratings.get(fx["home"], ELO_INITIAL)
         ea = ratings.get(fx["away"], ELO_INITIAL)
-        m, lam, mu = model.score_matrix(eh, ea, fx["ha_side"])
+        m, lam, mu = model.score_matrix(eh, ea, fx["ha_points"])
         p_home = float(np.tril(m, -1).sum())
         p_draw = float(np.trace(m))
         p_away = float(np.triu(m, 1).sum())
@@ -56,11 +59,14 @@ def predict_exact(ratings, model, fixtures, team_players):
 
         sc_home = likely_scorers(team_players, fx["home"], 2)
         sc_away = likely_scorers(team_players, fx["away"], 2)
+        played = fx.get("played")
         rows.append({
             "date": fx["date"],
             "group": fx["grp"],
             "home": fx["home"],
             "away": fx["away"],
+            "status": "JUGADO" if played else "pendiente",
+            "real_score": f"{fx['home_score']}-{fx['away_score']}" if played else "",
             "exact_score": f"{mh}-{ma}",
             "exact_prob": round(mp * 100, 1),
             "alt_scores": "  ·  ".join(f"{h}-{a} ({p*100:.0f}%)" for (h, a), p in tops[1:]),

@@ -81,7 +81,8 @@ def build():
         CREATE TABLE wc2026_fixtures (
             id INTEGER PRIMARY KEY,
             date TEXT, grp TEXT, home_team TEXT, away_team TEXT,
-            city TEXT, country TEXT, neutral INTEGER
+            city TEXT, country TEXT, neutral INTEGER,
+            home_score INTEGER, away_score INTEGER, played INTEGER
         );
         """
     )
@@ -149,26 +150,27 @@ def build():
     # ---- wc2026_fixtures: los 72 partidos de fase de grupos ----
     teams = set(all_teams())
     cur.execute(
-        "SELECT date,home_team,away_team,city,country,neutral FROM matches "
-        "WHERE tournament='FIFA World Cup' AND date>='2026-01-01' ORDER BY date,id"
+        "SELECT date,home_team,away_team,city,country,neutral,home_score,away_score,played "
+        "FROM matches WHERE tournament='FIFA World Cup' AND date>='2026-01-01' ORDER BY date,id"
     )
     fixtures = []
-    for d, home, away, city, country, neutral in cur.fetchall():
+    for d, home, away, city, country, neutral, hs, as_, played in cur.fetchall():
         if home in teams and away in teams:
             grp = None
             for gl, members in GROUPS.items():
                 if home in members and away in members:
                     grp = gl
                     break
-            fixtures.append((d, grp, home, away, city, country, neutral))
-    for i, (d, grp, home, away, city, country, neutral) in enumerate(fixtures, 1):
+            fixtures.append((d, grp, home, away, city, country, neutral, hs, as_, played))
+    for i, fx in enumerate(fixtures, 1):
+        d, grp, home, away, city, country, neutral, hs, as_, played = fx
         cur.execute(
-            "INSERT INTO wc2026_fixtures(id,date,grp,home_team,away_team,city,country,neutral)"
-            " VALUES (?,?,?,?,?,?,?,?)",
-            (i, d, grp, home, away, city, country, neutral),
+            "INSERT INTO wc2026_fixtures(id,date,grp,home_team,away_team,city,country,"
+            "neutral,home_score,away_score,played) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+            (i, d, grp, home, away, city, country, neutral, hs, as_, played),
         )
-    print(f"  wc2026_fixtures: {len(fixtures)} partidos de fase de grupos")
-
+    n_played = sum(1 for fx in fixtures if fx[-1])
+    print(f"  wc2026_fixtures: {len(fixtures)} partidos ({n_played} ya jugados)")
     conn.commit()
     _build_stats(conn)
     conn.close()

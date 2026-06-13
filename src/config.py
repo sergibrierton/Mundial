@@ -39,8 +39,17 @@ DATA_FILES = {
 # Parámetros del modelo
 # --------------------------------------------------------------------------
 ELO_INITIAL = 1500.0      # rating inicial de una selección nueva
-ELO_HOME_ADV = 65.0       # ventaja de campo en puntos Elo (sólo no-neutral)
+ELO_HOME_ADV = 85.0       # ventaja de campo en puntos Elo (sólo no-neutral)
+                          # Calibrado con 14.434 partidos no neutrales (2005+):
+                          # el local marca 1.67 vs 1.02 y gana el 50.9%.
 ELO_REVERSION = 0.0       # reversión a la media entre temporadas (0 = desactivado)
+
+# Corrección por anfitrión. Las selecciones anfitrionas (EE.UU., México,
+# Canadá) clasifican automáticamente y juegan sobre todo amistosos de bajo
+# nivel competitivo (34–50% de sus partidos recientes), por lo que el Elo
+# basado en resultados las INFRAVALORA de forma sistemática. Además, los
+# anfitriones de Mundial históricamente rinden por encima de su nivel.
+HOST_EXTRA = 35.0         # bonus de rating a los anfitriones durante el torneo
 
 # Factores K de importancia del partido (estilo World Football Elo)
 K_WORLD_CUP = 60.0
@@ -71,9 +80,9 @@ RANDOM_SEED = 20260611
 # no una certeza; ensancha la distribución de resultados de forma realista.
 ELO_SIM_SIGMA = 40.0
 
-# Ventaja de campo reducida para los anfitriones en partidos de eliminatoria
-# (sedes neutrales, pero con apoyo de afición local).
-HOST_KO_BONUS = 0.5  # fracción de ELO_HOME_ADV aplicada a anfitriones en KO
+# Ventaja de los anfitriones en eliminatoria (sedes neutrales, pero con
+# apoyo de afición local): se aplica la mitad del bonus de anfitrión.
+HOST_KO_EXTRA = HOST_EXTRA * 0.5
 
 # --------------------------------------------------------------------------
 # Mundial 2026 — Anfitriones

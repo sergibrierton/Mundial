@@ -40,6 +40,7 @@ def main():
     from fixtures import load_fixtures
     from predict import predict_group_matches, predict_exact
     from simulate import TournamentSimulator
+    from evaluation import evaluate
     import report
     from config import DB_PATH
 
@@ -83,8 +84,19 @@ def main():
     model = GoalModel.fit(res["calibration"])
     print(f"  a={model.a:.4f}  b={model.b:.6f}  rho={model.rho:.4f}")
 
-    print("\n[6/8] Prediciendo los 72 partidos (1-X-2 + marcador exacto)…")
     fixtures = load_fixtures()
+    n_played = sum(1 for fx in fixtures if fx["played"])
+    if n_played:
+        print(f"\n[BACKTEST] Evaluando el modelo en los {n_played} partidos ya jugados…")
+        eval_df, metrics = evaluate(res["wc_prematch"], adj, model, fixtures)
+        print(eval_df.to_string(index=False))
+        print(f"  Acierto 1-X-2: {metrics['acc_1x2']*100:.0f}%  |  "
+              f"marcador exacto: {metrics['acc_exact']*100:.0f}%  |  "
+              f"Brier: {metrics['brier']:.3f}  |  log-loss: {metrics['logloss']:.3f}")
+        report.write_eval(eval_df, metrics)
+
+    print(f"\n[6/8] Prediciendo los 72 partidos ({n_played} jugados, "
+          f"{72 - n_played} pendientes)…")
     pred_df = predict_group_matches(ratings, model, fixtures)
     exact_df = predict_exact(ratings, model, fixtures, pl["team_players"])
     report.write_group_predictions(pred_df)

@@ -66,12 +66,17 @@ def compute(min_date_for_calibration="1990-01-01"):
     last_played = {}
     calib = []   # (dr_efectiva, home_score, away_score)
     recent = {}  # team -> lista de (date, pts, gf, ga) recientes
+    wc_prematch = {}  # (date, home, away) -> (elo_home_previo, elo_away_previo)
 
     for row in df.itertuples(index=False):
         ht, at = row.home_team, row.away_team
         rh = ratings.get(ht, ELO_INITIAL)
         ra = ratings.get(at, ELO_INITIAL)
         ha_side = 0 if row.neutral else 1   # ventaja para el local si no es neutral
+
+        # Snapshot del Elo ANTES de los partidos del Mundial 2026 (backtest)
+        if row.tournament == "FIFA World Cup" and row.date >= "2026-01-01":
+            wc_prematch[(row.date, ht, at)] = (rh, ra)
 
         dr = rh - ra + ha_side * ELO_HOME_ADV
         we = 1.0 / (1.0 + 10 ** (-dr / 400.0))
@@ -108,6 +113,7 @@ def compute(min_date_for_calibration="1990-01-01"):
         "last_played": last_played,
         "calibration": calib,
         "recent": recent,
+        "wc_prematch": wc_prematch,
     }
 
 

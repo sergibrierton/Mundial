@@ -15,21 +15,40 @@ def write_ratings(ratings_df):
     ratings_df.to_csv(OUTPUT_DIR / "team_ratings.csv", index=False)
 
 
+def write_eval(eval_df, metrics):
+    """Backtest del modelo en los partidos ya jugados."""
+    eval_df.to_csv(OUTPUT_DIR / "backtest.csv", index=False)
+    L = ["# 📏 Backtest — rendimiento del modelo en partidos ya jugados\n",
+         f"Evaluado sobre **{metrics['n']} partidos** con el Elo **previo** a "
+         "cada partido (sin información del futuro).\n",
+         f"- **Acierto 1-X-2:** {metrics['acc_1x2']*100:.0f}%",
+         f"- **Acierto marcador exacto:** {metrics['acc_exact']*100:.0f}%",
+         f"- **Brier score:** {metrics['brier']:.3f} (0 = perfecto)",
+         f"- **Log-loss:** {metrics['logloss']:.3f}\n",
+         "| Fecha | Partido | Pred 1X2 | Real | P(1/X/2) | Pred. marcador | 1X2 | Exacto |",
+         "|---|---|---|---|---|---|---|---|"]
+    for _, r in eval_df.iterrows():
+        L.append(f"| {r.date} | {r['match']} | {r.pred_1x2} | {r.real_1x2} | "
+                 f"{r['p(1/X/2)']} | {r.pred_score} | {r.acierto_1x2} | {r.acierto_exacto} |")
+    (OUTPUT_DIR / "backtest.md").write_text("\n".join(L), encoding="utf-8")
+
+
 def write_group_predictions(pred_df):
     pred_df.to_csv(OUTPUT_DIR / "group_stage_predictions.csv", index=False)
     lines = ["# Predicciones — Fase de grupos (Mundial 2026)\n",
-             "Probabilidades 1-X-2, goles esperados (xG) y marcador más probable "
-             "para los 72 partidos.\n"]
+             "Probabilidades 1-X-2, goles esperados (xG) y marcador más probable. "
+             "Los partidos ya jugados muestran su **resultado real**.\n"]
     for g in GROUP_LETTERS:
         sub = pred_df[pred_df.group == g]
         lines.append(f"\n## Grupo {g}\n")
-        lines.append("| Fecha | Partido | 1 | X | 2 | xG | Marcador | Pronóstico |")
-        lines.append("|---|---|---|---|---|---|---|---|")
+        lines.append("| Fecha | Partido | Estado | 1 | X | 2 | xG | Predicción | Real |")
+        lines.append("|---|---|---|---|---|---|---|---|---|")
         for _, r in sub.iterrows():
+            real = f"**{r.real_score}**" if r.status == "JUGADO" else "—"
             lines.append(
-                f"| {r.date} | {r.home} vs {r.away} | {r.p_home}% | {r.p_draw}% | "
-                f"{r.p_away}% | {r.xg_home:.1f}-{r.xg_away:.1f} | "
-                f"{r.likely_score} ({r.likely_score_pct}%) | {r.prediction} |")
+                f"| {r.date} | {r.home} vs {r.away} | {r.status} | {r.p_home}% | "
+                f"{r.p_draw}% | {r.p_away}% | {r.xg_home:.1f}-{r.xg_away:.1f} | "
+                f"{r.likely_score} | {real} |")
     (OUTPUT_DIR / "group_stage_predictions.md").write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -46,12 +65,13 @@ def write_exact_predictions(exact_df):
     for g in GROUP_LETTERS:
         sub = exact_df[exact_df.group == g]
         L.append(f"\n## Grupo {g}\n")
-        L.append("| Fecha | Partido | **Resultado** | Prob. | Alternativos | 1 / X / 2 | xG | Goleadores probables |")
+        L.append("| Fecha | Partido | **Pronóstico** | Prob. | Real | 1 / X / 2 | xG | Goleadores probables |")
         L.append("|---|---|---|---|---|---|---|---|")
         for _, r in sub.iterrows():
+            real = f"**{r.real_score}** ✅" if r.status == "JUGADO" else "—"
             L.append(
                 f"| {r.date} | {r.home} – {r.away} | **{r.exact_score}** | "
-                f"{r.exact_prob}% | {r.alt_scores} | {r.p_home}/{r.p_draw}/{r.p_away} | "
+                f"{r.exact_prob}% | {real} | {r.p_home}/{r.p_draw}/{r.p_away} | "
                 f"{r.xg_home:.1f}-{r.xg_away:.1f} | {r.scorer_home} vs {r.scorer_away} |")
     (OUTPUT_DIR / "group_stage_exact_results.md").write_text("\n".join(L), encoding="utf-8")
 
