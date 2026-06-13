@@ -92,20 +92,81 @@ def write_players(players_summary):
     (OUTPUT_DIR / "player_analysis.md").write_text("\n".join(L), encoding="utf-8")
 
 
+def write_consensus(sim_df):
+    """Compara el modelo propio con Opta y el mercado, y calcula el consenso.
+
+    Devuelve el dict de consenso para usarlo en el resumen.
+    """
+    from external_forecasts import OPTA_TITLE, consensus_title
+    model_probs = dict(zip(sim_df.team, sim_df.champion))
+    cons, mkt = consensus_title(model_probs)
+    rows = []
+    teams = sorted(cons, key=lambda t: -cons[t])
+    for t in teams:
+        if cons[t] < 0.005:
+            continue
+        rows.append({
+            "team": t,
+            "modelo": model_probs.get(t, float("nan")),
+            "opta": OPTA_TITLE.get(t, float("nan")),
+            "mercado": mkt.get(t, float("nan")),
+            "consenso": cons[t],
+        })
+    df = pd.DataFrame(rows)
+    df.to_csv(OUTPUT_DIR / "consensus_title.csv", index=False)
+
+    def f(x):
+        return "—" if x != x else f"{x*100:.1f}%"
+
+    L = ["# 🤝 Consenso de pronósticos — Campeón del Mundial 2026\n",
+         "Cruce del **modelo propio** (Elo histórico + plantilla + anclaje al "
+         "Ranking FIFA) con el **supercomputador Opta** y el **mercado de "
+         "apuestas**. El **consenso** es la media de las fuentes disponibles: "
+         "es el pronóstico más fiable (ensemble), no depende de un solo método.\n",
+         "| # | Selección | Modelo | Opta | Mercado | **Consenso** |",
+         "|---|---|---|---|---|---|"]
+    for i, r in enumerate(rows, 1):
+        L.append(f"| {i} | {r['team']} | {f(r['modelo'])} | {f(r['opta'])} | "
+                 f"{f(r['mercado'])} | **{f(r['consenso'])}** |")
+    L.append("\n> Fuentes: Opta (theanalyst.com, jun 2026); cuotas de mercado "
+             "(jun 2026). El consenso reduce el sesgo de cualquier modelo aislado.\n")
+    (OUTPUT_DIR / "consensus_title.md").write_text("\n".join(L), encoding="utf-8")
+    return cons
+
+
 def write_forecast(sim_df):
     sim_df.to_csv(OUTPUT_DIR / "tournament_forecast.csv", index=False)
 
 
-def write_summary(sim_df, ratings_df, model, n_sims):
+def write_summary(sim_df, ratings_df, model, n_sims, consensus=None):
     """Informe maestro en español: PREDICCIONES.md."""
     L = []
     L.append("# 🏆 Predicción Mundial 2026 — Informe maestro\n")
     L.append(f"Simulación Monte Carlo de **{n_sims:,} torneos** completos, basada en "
-             "ratings Elo calculados sobre **todo el histórico de partidos "
-             "internacionales (1872–2026)** y un modelo de goles de Poisson "
-             "con corrección de Dixon-Coles.\n")
-    L.append(f"> Parámetros del modelo de goles: a={model.a:.3f}, "
-             f"b={model.b:.5f} (por punto Elo), ρ={model.rho:.3f}.\n")
+             "ratings Elo (histórico 1872–2026) + análisis de plantilla + "
+             "**anclaje al Ranking Mundial FIFA**, con modelo de goles de Poisson "
+             "(Dixon-Coles). Condicionada a los partidos ya jugados.\n")
+
+    if consensus:
+        from external_forecasts import OPTA_TITLE, market_title
+        mkt = market_title()
+        model_probs = dict(zip(sim_df.team, sim_df.champion))
+        L.append("\n## 🤝 Consenso — Campeón (modelo + Opta + mercado)\n")
+        L.append("Pronóstico más fiable: media de tres fuentes independientes.\n")
+        L.append("| # | Selección | Modelo | Opta | Mercado | **Consenso** |")
+        L.append("|---|---|---|---|---|---|")
+        top = sorted(consensus, key=lambda t: -consensus[t])
+        for i, t in enumerate([x for x in top if consensus[x] >= 0.005], 1):
+            def f(x):
+                return "—" if x is None else f"{x*100:.1f}%"
+            L.append(f"| {i} | {t} | {f(model_probs.get(t))} | "
+                     f"{f(OPTA_TITLE.get(t))} | {f(mkt.get(t))} | "
+                     f"**{f(consensus[t])}** |")
+
+    L.append(f"\n> Parámetros: modelo de goles a={model.a:.3f}, "
+             f"b={model.b:.5f}/punto Elo, ρ={model.rho:.3f}; "
+             "ventaja de campo 85 Elo; bonus anfitrión 35 Elo; "
+             "incertidumbre σ=120 Elo (calibrada al consenso).\n")
 
     # ---- Favoritos al título ----
     L.append("\n## Favoritos al título\n")

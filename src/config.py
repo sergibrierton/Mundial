@@ -78,7 +78,10 @@ RANDOM_SEED = 20260611
 # (lesiones, estado de forma, factor sorteo). Ruido gaussiano en puntos Elo
 # aplicado por equipo y por simulación. Refleja que el Elo es una estimación,
 # no una certeza; ensancha la distribución de resultados de forma realista.
-ELO_SIM_SIGMA = 40.0
+# Calibrado (σ=120) para que la concentración de probabilidades de título
+# coincida con el consenso del mercado y del supercomputador Opta, en lugar
+# de quedar sobreconfiada en un solo favorito.
+ELO_SIM_SIGMA = 120.0
 
 # Ventaja de los anfitriones en eliminatoria (sedes neutrales, pero con
 # apoyo de afición local): se aplica la mitad del bonus de anfitrión.

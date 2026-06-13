@@ -28,6 +28,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sims", type=int, default=DEFAULT_SIMULATIONS)
     ap.add_argument("--seed", type=int, default=RANDOM_SEED)
+    ap.add_argument("--sigma", type=float, default=None,
+                    help="incertidumbre Elo por simulación (calibra la concentración)")
     ap.add_argument("--skip-download", action="store_true")
     ap.add_argument("--rebuild-db", action="store_true")
     args = ap.parse_args()
@@ -36,6 +38,7 @@ def main():
     import build_database
     import ratings as ratings_mod
     import players as players_mod
+    import fifa_ranking
     from model import GoalModel
     from fixtures import load_fixtures
     from predict import predict_group_matches, predict_exact
@@ -69,9 +72,12 @@ def main():
     adj = pl["elo_adj"]
     # Rating combinado: Elo histórico + calidad/forma ofensiva de la plantilla.
     ratings = {t: res["ratings"][t] + adj.get(t, 0.0) for t in res["ratings"]}
+    # Anclaje al Ranking Mundial FIFA oficial (fuente externa independiente):
+    # corrige infravaloraciones y comprime la cima hacia la paridad real.
+    ratings = fifa_ranking.blend(ratings)
     ratings_df["elo_hist"] = ratings_df["elo"]
     ratings_df["player_adj"] = ratings_df["team"].map(adj).round(1)
-    ratings_df["elo"] = (ratings_df["elo"] + ratings_df["player_adj"]).round(1)
+    ratings_df["elo"] = ratings_df["team"].map(lambda t: round(ratings[t], 1))
     ratings_df = ratings_df.sort_values("elo", ascending=False).reset_index(drop=True)
     ratings_df["rank"] = ratings_df.index + 1
     top_attack = pl["summary"].sort_values("elo_adj", ascending=False).head(3)
@@ -105,7 +111,8 @@ def main():
     print(f"  {len(pred_df)} partidos predichos (con goleadores probables).")
 
     print(f"\n[7/8] Simulando {args.sims:,} torneos completos (Monte Carlo)…")
-    sim = TournamentSimulator(ratings, model, fixtures, args.sims, args.seed)
+    sim = TournamentSimulator(ratings, model, fixtures, args.sims, args.seed,
+                              sigma=args.sigma)
     sim_df = sim.run()
     print("  Top 5 candidatos al título:")
     for _, r in sim_df.head(5).iterrows():
@@ -116,7 +123,11 @@ def main():
     report.write_ratings(ratings_df)
     report.write_forecast(sim_df)
     report.write_stats()
-    report.write_summary(sim_df, ratings_df, model, args.sims)
+    consensus = report.write_consensus(sim_df)
+    report.write_summary(sim_df, ratings_df, model, args.sims, consensus)
+    print("  Consenso (modelo+Opta+mercado) top 3: " +
+          ", ".join(f"{t} {consensus[t]*100:.1f}%"
+                    for t in sorted(consensus, key=lambda x: -consensus[x])[:3]))
     print("  Escritos: PREDICCIONES.md, group_stage_predictions.{csv,md}, "
           "group_stage_exact_results.{csv,md}, player_analysis.{csv,md}, "
           "team_ratings.csv, tournament_forecast.csv, team_historical_stats.csv")

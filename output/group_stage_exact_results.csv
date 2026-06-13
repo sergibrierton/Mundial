@@ -1,73 +1,73 @@
 date,group,home,away,status,real_score,exact_score,exact_prob,alt_scores,p_home,p_draw,p_away,xg_home,xg_away,scorer_home,scorer_away,result
-2026-06-11,A,Mexico,South Africa,JUGADO,2-0,2-0,13.9,3-0 (13%)  ·  4-0 (10%),85.3,10.9,3.8,2.9,0.51,"Raúl Jiménez, César Montes","Lyle Foster, Oswin Appollis",Victoria Mexico 2-0
-2026-06-11,A,South Korea,Czech Republic,JUGADO,2-1,1-1,12.9,1-0 (12%)  ·  2-0 (10%),49.7,27.1,23.2,1.53,0.96,"Son Heung-min, Lee Kang-in","Patrik Schick, Tomáš Souček",Empate 1-1
-2026-06-12,B,Canada,Bosnia and Herzegovina,JUGADO,1-1,2-0,13.7,1-0 (12%)  ·  3-0 (10%),72.1,18.5,9.3,2.21,0.67,"Jonathan David, Tajon Buchanan","Edin Džeko, Ermedin Demirović",Victoria Canada 2-0
-2026-06-12,D,United States,Paraguay,JUGADO,4-1,1-1,12.4,1-0 (12%)  ·  2-0 (11%),53.7,26.0,20.3,1.63,0.91,"Jesús Ferreira, Folarin Balogun","Julio Enciso, Antonio Sanabria",Empate 1-1
-2026-06-13,B,Qatar,Switzerland,pendiente,,0-2,14.2,0-3 (12%)  ·  0-1 (11%),5.6,13.8,80.6,0.57,2.6,"Almoez Ali, Akram Afif","Breel Embolo, Zeki Amdouni",Victoria Switzerland 2-0 (visitante)
-2026-06-13,C,Brazil,Morocco,pendiente,,1-1,13.3,1-0 (11%)  ·  0-0 (9%),45.0,28.1,26.9,1.42,1.04,"Raphinha, Vinícius Júnior","Ayoub El Kaabi, Brahim Díaz",Empate 1-1
-2026-06-13,C,Haiti,Scotland,pendiente,,1-1,12.3,0-1 (12%)  ·  0-2 (11%),20.1,26.0,54.0,0.9,1.63,"Duckens Nazon, Frantzdy Pierrot","Scott McTominay, John McGinn",Empate 1-1
-2026-06-13,D,Australia,Turkey,pendiente,,1-1,13.3,0-1 (11%)  ·  0-0 (9%),26.8,28.1,45.2,1.04,1.42,"Jackson Irvine, Craig Goodwin","Kerem Aktürkoğlu, Hakan Çalhanoğlu",Empate 1-1
-2026-06-14,E,Germany,Curaçao,pendiente,,2-0,14.1,3-0 (13%)  ·  1-0 (10%),83.1,12.3,4.6,2.75,0.54,"Florian Wirtz, Kai Havertz","Gervane Kastaneer, Kenji Gorré",Victoria Germany 2-0
-2026-06-14,E,Ivory Coast,Ecuador,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (12%),16.8,24.3,58.8,0.83,1.77,"Franck Kessié, Amad Diallo","Enner Valencia, Félix Torres",Victoria Ecuador 1-0 (visitante)
-2026-06-14,F,Netherlands,Japan,pendiente,,1-1,13.6,1-0 (11%)  ·  0-0 (9%),39.7,28.8,31.5,1.3,1.13,"Cody Gakpo, Memphis Depay","Ayase Ueda, Takumi Minamino",Empate 1-1
-2026-06-14,F,Sweden,Tunisia,pendiente,,1-1,13.6,1-0 (11%)  ·  0-0 (9%),41.5,28.6,29.9,1.34,1.1,"Viktor Gyökeres, Alexander Isak","Mohamed Ali Ben Romdhane, Elias Achouri",Empate 1-1
-2026-06-15,G,Belgium,Egypt,pendiente,,1-0,12.4,1-1 (12%)  ·  2-0 (11%),57.0,25.0,18.0,1.71,0.86,"Romelu Lukaku, Kevin De Bruyne","Mohamed Salah, Trézéguet",Victoria Belgium 1-0
-2026-06-15,G,Iran,New Zealand,pendiente,,1-0,12.3,1-1 (12%)  ·  2-0 (11%),54.3,25.8,19.8,1.64,0.9,"Mehdi Taremi, Sardar Azmoun","Chris Wood, Ben Waine",Victoria Iran 1-0
-2026-06-15,H,Spain,Cape Verde,pendiente,,3-0,13.6,4-0 (14%)  ·  5-0 (11%),94.7,4.3,1.0,3.97,0.37,"Mikel Oyarzabal, Mikel Merino","Dailon Livramento, Jamiro Monteiro",Victoria Spain 3-0
-2026-06-15,H,Saudi Arabia,Uruguay,pendiente,,0-2,13.5,0-1 (12%)  ·  0-3 (10%),10.5,19.7,69.9,0.7,2.12,"Firas Al-Buraikan, Saleh Al-Shehri","Darwin Núñez, Giorgian de Arrascaeta",Victoria Uruguay 2-0 (visitante)
-2026-06-16,I,France,Senegal,pendiente,,1-0,12.5,2-0 (12%)  ·  1-1 (11%),63.5,22.5,14.0,1.9,0.77,"Kylian Mbappé, Randal Kolo Muani","Sadio Mané, Ismaïla Sarr",Victoria France 1-0
-2026-06-16,I,Iraq,Norway,pendiente,,0-2,13.2,0-1 (12%)  ·  1-1 (10%),11.4,20.5,68.1,0.72,2.06,"Aymen Hussein, Mohanad Ali","Erling Haaland, Alexander Sørloth",Victoria Norway 2-0 (visitante)
-2026-06-16,J,Argentina,Algeria,pendiente,,2-0,13.9,1-0 (12%)  ·  3-0 (10%),73.3,17.9,8.8,2.25,0.65,"Lionel Messi, Lautaro Martínez","Mohamed Amoura, Baghdad Bounedjah",Victoria Argentina 2-0
-2026-06-16,J,Austria,Jordan,pendiente,,1-1,12.5,1-0 (12%)  ·  2-0 (10%),52.6,26.3,21.0,1.6,0.92,"Marko Arnautović, Michael Gregoritsch","Yazan Al-Naimat, Musa Al-Taamari",Empate 1-1
-2026-06-17,K,Portugal,DR Congo,pendiente,,2-0,13.9,1-0 (12%)  ·  3-0 (11%),73.8,17.6,8.5,2.27,0.65,"Cristiano Ronaldo, Bruno Fernandes","Cédric Bakambu, Yoane Wissa",Victoria Portugal 2-0
-2026-06-17,K,Uzbekistan,Colombia,pendiente,,0-2,12.8,0-1 (12%)  ·  1-1 (10%),12.9,21.8,65.3,0.75,1.96,"Abbosbek Fayzullaev, Eldor Shomurodov","Luis Díaz, Luis Suárez",Victoria Colombia 2-0 (visitante)
-2026-06-17,L,England,Croatia,pendiente,,1-1,12.7,1-0 (12%)  ·  2-0 (10%),50.7,26.9,22.4,1.55,0.95,"Harry Kane, Bukayo Saka","Andrej Kramarić, Ivan Perišić",Empate 1-1
-2026-06-17,L,Ghana,Panama,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (11%),14.2,22.7,63.2,0.78,1.89,"Jordan Ayew, Mohammed Kudus","Ismael Díaz, José Fajardo",Victoria Panama 1-0 (visitante)
-2026-06-18,A,Czech Republic,South Africa,pendiente,,1-1,12.4,1-0 (12%)  ·  2-0 (10%),53.2,26.2,20.6,1.61,0.91,"Patrik Schick, Tomáš Souček","Lyle Foster, Oswin Appollis",Empate 1-1
-2026-06-18,A,Mexico,South Korea,pendiente,,1-0,12.5,1-1 (12%)  ·  2-0 (11%),57.6,24.8,17.6,1.73,0.85,"Raúl Jiménez, César Montes","Son Heung-min, Lee Kang-in",Victoria Mexico 1-0
-2026-06-18,B,Switzerland,Bosnia and Herzegovina,pendiente,,2-0,13.4,1-0 (12%)  ·  3-0 (9%),69.8,19.7,10.5,2.12,0.7,"Breel Embolo, Zeki Amdouni","Edin Džeko, Ermedin Demirović",Victoria Switzerland 2-0
-2026-06-18,B,Canada,Qatar,pendiente,,2-0,14.2,3-0 (13%)  ·  1-0 (10%),82.5,12.7,4.8,2.71,0.54,"Jonathan David, Tajon Buchanan","Almoez Ali, Akram Afif",Victoria Canada 2-0
-2026-06-19,C,Scotland,Morocco,pendiente,,1-1,12.6,0-1 (12%)  ·  0-2 (10%),21.7,26.6,51.7,0.94,1.58,"Scott McTominay, John McGinn","Ayoub El Kaabi, Brahim Díaz",Empate 1-1
-2026-06-19,C,Brazil,Haiti,pendiente,,2-0,14.2,3-0 (12%)  ·  1-0 (11%),78.3,15.2,6.5,2.48,0.6,"Raphinha, Vinícius Júnior","Duckens Nazon, Frantzdy Pierrot",Victoria Brazil 2-0
-2026-06-19,D,United States,Australia,pendiente,,1-1,13.2,1-0 (12%)  ·  0-0 (9%),46.4,27.8,25.8,1.45,1.02,"Jesús Ferreira, Folarin Balogun","Jackson Irvine, Craig Goodwin",Empate 1-1
-2026-06-19,D,Turkey,Paraguay,pendiente,,1-1,12.5,1-0 (12%)  ·  2-0 (10%),52.5,26.4,21.1,1.6,0.92,"Kerem Aktürkoğlu, Hakan Çalhanoğlu","Julio Enciso, Antonio Sanabria",Empate 1-1
-2026-06-20,E,Germany,Ivory Coast,pendiente,,1-0,12.5,2-0 (12%)  ·  1-1 (11%),60.9,23.6,15.5,1.83,0.81,"Florian Wirtz, Kai Havertz","Franck Kessié, Amad Diallo",Victoria Germany 1-0
-2026-06-20,E,Ecuador,Curaçao,pendiente,,2-0,14.2,3-0 (13%)  ·  1-0 (10%),81.6,13.2,5.2,2.66,0.55,"Enner Valencia, Félix Torres","Gervane Kastaneer, Kenji Gorré",Victoria Ecuador 2-0
-2026-06-20,F,Netherlands,Sweden,pendiente,,2-0,13.1,1-0 (12%)  ·  1-1 (10%),67.7,20.7,11.6,2.04,0.72,"Cody Gakpo, Memphis Depay","Viktor Gyökeres, Alexander Isak",Victoria Netherlands 2-0
-2026-06-20,F,Tunisia,Japan,pendiente,,0-2,13.4,0-1 (12%)  ·  1-1 (9%),10.7,19.9,69.4,0.7,2.1,"Mohamed Ali Ben Romdhane, Elias Achouri","Ayase Ueda, Takumi Minamino",Victoria Japan 2-0 (visitante)
-2026-06-21,G,Belgium,Iran,pendiente,,1-1,13.4,1-0 (11%)  ·  0-0 (9%),44.5,28.2,27.3,1.41,1.05,"Romelu Lukaku, Kevin De Bruyne","Mehdi Taremi, Sardar Azmoun",Empate 1-1
-2026-06-21,G,New Zealand,Egypt,pendiente,,1-1,13.5,0-1 (11%)  ·  0-0 (9%),29.5,28.5,41.9,1.09,1.35,"Chris Wood, Ben Waine","Mohamed Salah, Trézéguet",Empate 1-1
-2026-06-21,H,Spain,Saudi Arabia,pendiente,,3-0,14.1,4-0 (13%)  ·  2-0 (11%),93.0,5.6,1.4,3.67,0.4,"Mikel Oyarzabal, Mikel Merino","Firas Al-Buraikan, Saleh Al-Shehri",Victoria Spain 3-0
-2026-06-21,H,Uruguay,Cape Verde,pendiente,,2-0,14.0,1-0 (12%)  ·  3-0 (11%),74.2,17.4,8.3,2.29,0.64,"Darwin Núñez, Giorgian de Arrascaeta","Dailon Livramento, Jamiro Monteiro",Victoria Uruguay 2-0
-2026-06-22,I,France,Iraq,pendiente,,2-0,14.2,3-0 (13%)  ·  1-0 (10%),82.1,12.9,5.0,2.68,0.55,"Kylian Mbappé, Randal Kolo Muani","Aymen Hussein, Mohanad Ali",Victoria France 2-0
-2026-06-22,I,Norway,Senegal,pendiente,,1-1,13.2,1-0 (12%)  ·  0-0 (9%),46.7,27.8,25.5,1.46,1.01,"Erling Haaland, Alexander Sørloth","Sadio Mané, Ismaïla Sarr",Empate 1-1
-2026-06-22,J,Argentina,Austria,pendiente,,2-0,13.4,1-0 (12%)  ·  1-1 (9%),69.3,19.9,10.8,2.1,0.7,"Lionel Messi, Lautaro Martínez","Marko Arnautović, Michael Gregoritsch",Victoria Argentina 2-0
-2026-06-22,J,Jordan,Algeria,pendiente,,1-1,13.0,0-1 (12%)  ·  0-2 (9%),24.4,27.5,48.1,0.99,1.49,"Yazan Al-Naimat, Musa Al-Taamari","Mohamed Amoura, Baghdad Bounedjah",Empate 1-1
-2026-06-23,K,Portugal,Uzbekistan,pendiente,,2-0,13.0,1-0 (12%)  ·  1-1 (10%),67.0,21.0,12.0,2.02,0.73,"Cristiano Ronaldo, Bruno Fernandes","Abbosbek Fayzullaev, Eldor Shomurodov",Victoria Portugal 2-0
-2026-06-23,K,Colombia,DR Congo,pendiente,,2-0,13.8,1-0 (12%)  ·  3-0 (10%),72.3,18.5,9.3,2.21,0.67,"Luis Díaz, Luis Suárez","Cédric Bakambu, Yoane Wissa",Victoria Colombia 2-0
-2026-06-23,L,England,Ghana,pendiente,,3-0,14.0,2-0 (13%)  ·  4-0 (11%),88.5,8.7,2.7,3.16,0.47,"Harry Kane, Bukayo Saka","Jordan Ayew, Mohammed Kudus",Victoria England 3-0
-2026-06-23,L,Panama,Croatia,pendiente,,1-1,12.6,0-1 (12%)  ·  0-2 (10%),21.5,26.5,52.0,0.93,1.58,"Ismael Díaz, José Fajardo","Andrej Kramarić, Ivan Perišić",Empate 1-1
-2026-06-24,A,Mexico,Czech Republic,pendiente,,2-0,13.7,1-0 (12%)  ·  3-0 (10%),71.4,18.9,9.7,2.18,0.68,"Raúl Jiménez, César Montes","Patrik Schick, Tomáš Souček",Victoria Mexico 2-0
-2026-06-24,A,South Africa,South Korea,pendiente,,0-2,13.1,0-1 (12%)  ·  1-1 (10%),11.8,20.8,67.4,0.73,2.03,"Lyle Foster, Oswin Appollis","Son Heung-min, Lee Kang-in",Victoria South Korea 2-0 (visitante)
-2026-06-24,B,Canada,Switzerland,pendiente,,1-1,13.7,1-0 (10%)  ·  0-0 (10%),38.0,28.9,33.1,1.27,1.16,"Jonathan David, Tajon Buchanan","Breel Embolo, Zeki Amdouni",Empate 1-1
-2026-06-24,B,Bosnia and Herzegovina,Qatar,pendiente,,1-1,13.0,1-0 (12%)  ·  2-0 (9%),48.2,27.5,24.3,1.49,0.99,"Edin Džeko, Ermedin Demirović","Almoez Ali, Akram Afif",Empate 1-1
-2026-06-24,C,Scotland,Brazil,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (11%),15.2,23.4,61.4,0.8,1.84,"Scott McTominay, John McGinn","Raphinha, Vinícius Júnior",Victoria Brazil 1-0 (visitante)
-2026-06-24,C,Morocco,Haiti,pendiente,,2-0,13.5,1-0 (12%)  ·  3-0 (10%),69.9,19.6,10.4,2.12,0.69,"Ayoub El Kaabi, Brahim Díaz","Duckens Nazon, Frantzdy Pierrot",Victoria Morocco 2-0
-2026-06-25,D,United States,Turkey,pendiente,,1-1,13.7,1-0 (10%)  ·  0-1 (10%),36.7,28.9,34.4,1.24,1.19,"Jesús Ferreira, Folarin Balogun","Kerem Aktürkoğlu, Hakan Çalhanoğlu",Empate 1-1
-2026-06-25,D,Paraguay,Australia,pendiente,,1-1,13.5,0-1 (11%)  ·  0-0 (9%),29.0,28.5,42.5,1.08,1.36,"Julio Enciso, Antonio Sanabria","Jackson Irvine, Craig Goodwin",Empate 1-1
-2026-06-25,E,Curaçao,Ivory Coast,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (11%),15.4,23.5,61.0,0.81,1.83,"Gervane Kastaneer, Kenji Gorré","Franck Kessié, Amad Diallo",Victoria Ivory Coast 1-0 (visitante)
-2026-06-25,E,Ecuador,Germany,pendiente,,1-1,13.7,0-1 (10%)  ·  1-0 (10%),33.6,28.9,37.5,1.17,1.26,"Enner Valencia, Félix Torres","Florian Wirtz, Kai Havertz",Empate 1-1
-2026-06-25,F,Japan,Sweden,pendiente,,1-0,12.5,2-0 (12%)  ·  1-1 (11%),63.5,22.5,14.0,1.9,0.77,"Ayase Ueda, Takumi Minamino","Viktor Gyökeres, Alexander Isak",Victoria Japan 1-0
-2026-06-25,F,Tunisia,Netherlands,pendiente,,0-2,13.9,0-1 (12%)  ·  0-3 (10%),8.8,17.9,73.3,0.65,2.25,"Mohamed Ali Ben Romdhane, Elias Achouri","Cody Gakpo, Memphis Depay",Victoria Netherlands 2-0 (visitante)
-2026-06-26,G,Egypt,Iran,pendiente,,1-1,13.1,0-1 (12%)  ·  0-2 (9%),24.8,27.6,47.6,1.0,1.48,"Mohamed Salah, Trézéguet","Mehdi Taremi, Sardar Azmoun",Empate 1-1
-2026-06-26,G,New Zealand,Belgium,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (11%),13.9,22.5,63.6,0.77,1.91,"Chris Wood, Ben Waine","Romelu Lukaku, Kevin De Bruyne",Victoria Belgium 1-0 (visitante)
-2026-06-26,H,Cape Verde,Saudi Arabia,pendiente,,1-1,13.6,0-1 (11%)  ·  0-0 (9%),31.0,28.7,40.2,1.12,1.31,"Dailon Livramento, Jamiro Monteiro","Firas Al-Buraikan, Saleh Al-Shehri",Empate 1-1
-2026-06-26,H,Uruguay,Spain,pendiente,,0-2,13.4,0-1 (12%)  ·  1-1 (9%),10.7,19.8,69.5,0.7,2.1,"Darwin Núñez, Giorgian de Arrascaeta","Mikel Oyarzabal, Mikel Merino",Victoria Spain 2-0 (visitante)
-2026-06-26,I,Norway,France,pendiente,,1-1,12.6,0-1 (12%)  ·  0-2 (10%),21.5,26.5,52.0,0.93,1.58,"Erling Haaland, Alexander Sørloth","Kylian Mbappé, Randal Kolo Muani",Empate 1-1
-2026-06-26,I,Senegal,Iraq,pendiente,,1-0,12.4,1-1 (12%)  ·  2-0 (11%),56.9,25.0,18.1,1.71,0.86,"Sadio Mané, Ismaïla Sarr","Aymen Hussein, Mohanad Ali",Victoria Senegal 1-0
-2026-06-27,J,Algeria,Austria,pendiente,,1-1,13.6,0-1 (11%)  ·  0-0 (9%),31.4,28.7,39.8,1.13,1.3,"Mohamed Amoura, Baghdad Bounedjah","Marko Arnautović, Michael Gregoritsch",Empate 1-1
-2026-06-27,J,Jordan,Argentina,pendiente,,0-2,14.1,0-3 (13%)  ·  0-1 (10%),4.5,12.1,83.4,0.53,2.77,"Yazan Al-Naimat, Musa Al-Taamari","Lionel Messi, Lautaro Martínez",Victoria Argentina 2-0 (visitante)
-2026-06-27,K,Colombia,Portugal,pendiente,,1-1,13.7,0-1 (10%)  ·  1-0 (10%),33.9,28.9,37.2,1.18,1.25,"Luis Díaz, Luis Suárez","Cristiano Ronaldo, Bruno Fernandes",Empate 1-1
-2026-06-27,K,DR Congo,Uzbekistan,pendiente,,1-1,13.5,0-1 (11%)  ·  0-0 (9%),28.8,28.4,42.8,1.08,1.37,"Cédric Bakambu, Yoane Wissa","Abbosbek Fayzullaev, Eldor Shomurodov",Empate 1-1
-2026-06-27,L,Panama,England,pendiente,,0-2,13.1,0-1 (12%)  ·  1-1 (10%),11.9,20.9,67.2,0.73,2.02,"Ismael Díaz, José Fajardo","Harry Kane, Bukayo Saka",Victoria England 2-0 (visitante)
-2026-06-27,L,Croatia,Ghana,pendiente,,2-0,14.2,3-0 (12%)  ·  1-0 (11%),78.1,15.3,6.6,2.47,0.6,"Andrej Kramarić, Ivan Perišić","Jordan Ayew, Mohammed Kudus",Victoria Croatia 2-0
+2026-06-11,A,Mexico,South Africa,JUGADO,2-0,3-0,14.2,2-0 (12%)  ·  4-0 (12%),90.9,7.1,2.0,3.4,0.43,"Raúl Jiménez, César Montes","Lyle Foster, Oswin Appollis",Victoria Mexico 3-0
+2026-06-11,A,South Korea,Czech Republic,JUGADO,2-1,1-1,12.3,1-0 (12%)  ·  2-0 (11%),54.1,25.9,19.9,1.64,0.9,"Son Heung-min, Lee Kang-in","Patrik Schick, Tomáš Souček",Empate 1-1
+2026-06-12,B,Canada,Bosnia and Herzegovina,JUGADO,1-1,2-0,14.2,3-0 (12%)  ·  1-0 (11%),77.4,15.7,6.9,2.44,0.61,"Jonathan David, Tajon Buchanan","Edin Džeko, Ermedin Demirović",Victoria Canada 2-0
+2026-06-12,D,United States,Paraguay,JUGADO,4-1,2-0,13.6,1-0 (12%)  ·  3-0 (10%),70.8,19.2,10.0,2.15,0.68,"Jesús Ferreira, Folarin Balogun","Julio Enciso, Antonio Sanabria",Victoria United States 2-0
+2026-06-13,B,Qatar,Switzerland,pendiente,,0-2,14.2,0-3 (12%)  ·  0-1 (10%),5.4,13.5,81.2,0.56,2.63,"Almoez Ali, Akram Afif","Breel Embolo, Zeki Amdouni",Victoria Switzerland 2-0 (visitante)
+2026-06-13,C,Brazil,Morocco,pendiente,,1-1,13.6,1-0 (11%)  ·  0-0 (9%),41.2,28.6,30.2,1.33,1.11,"Raphinha, Vinícius Júnior","Ayoub El Kaabi, Brahim Díaz",Empate 1-1
+2026-06-13,C,Haiti,Scotland,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (11%),15.4,23.5,61.1,0.81,1.83,"Duckens Nazon, Frantzdy Pierrot","Scott McTominay, John McGinn",Victoria Scotland 1-0 (visitante)
+2026-06-13,D,Australia,Turkey,pendiente,,1-1,13.6,0-1 (11%)  ·  0-0 (9%),30.4,28.6,41.0,1.11,1.33,"Jackson Irvine, Craig Goodwin","Kerem Aktürkoğlu, Hakan Çalhanoğlu",Empate 1-1
+2026-06-14,E,Germany,Curaçao,pendiente,,3-0,14.1,4-0 (13%)  ·  2-0 (12%),92.3,6.1,1.6,3.58,0.41,"Florian Wirtz, Kai Havertz","Gervane Kastaneer, Kenji Gorré",Victoria Germany 3-0
+2026-06-14,E,Ivory Coast,Ecuador,pendiente,,0-1,12.3,1-1 (12%)  ·  0-2 (11%),19.9,25.9,54.1,0.9,1.64,"Franck Kessié, Amad Diallo","Enner Valencia, Félix Torres",Victoria Ecuador 1-0 (visitante)
+2026-06-14,F,Netherlands,Japan,pendiente,,1-1,13.2,1-0 (12%)  ·  0-0 (9%),46.2,27.9,26.0,1.44,1.02,"Cody Gakpo, Memphis Depay","Ayase Ueda, Takumi Minamino",Empate 1-1
+2026-06-14,F,Sweden,Tunisia,pendiente,,1-1,13.5,1-0 (11%)  ·  0-0 (9%),42.2,28.5,29.3,1.36,1.09,"Viktor Gyökeres, Alexander Isak","Mohamed Ali Ben Romdhane, Elias Achouri",Empate 1-1
+2026-06-15,G,Belgium,Egypt,pendiente,,2-0,12.6,1-0 (12%)  ·  1-1 (10%),64.5,22.1,13.4,1.94,0.76,"Romelu Lukaku, Kevin De Bruyne","Mohamed Salah, Trézéguet",Victoria Belgium 2-0
+2026-06-15,G,Iran,New Zealand,pendiente,,2-0,14.1,1-0 (12%)  ·  3-0 (11%),75.8,16.6,7.6,2.36,0.62,"Mehdi Taremi, Sardar Azmoun","Chris Wood, Ben Waine",Victoria Iran 2-0
+2026-06-15,H,Spain,Cape Verde,pendiente,,4-0,13.4,5-0 (13%)  ·  3-0 (11%),97.9,1.8,0.3,4.91,0.3,"Mikel Oyarzabal, Mikel Merino","Dailon Livramento, Jamiro Monteiro",Victoria Spain 4-0
+2026-06-15,H,Saudi Arabia,Uruguay,pendiente,,0-2,14.2,0-3 (12%)  ·  0-1 (11%),6.0,14.4,79.7,0.58,2.55,"Firas Al-Buraikan, Saleh Al-Shehri","Darwin Núñez, Giorgian de Arrascaeta",Victoria Uruguay 2-0 (visitante)
+2026-06-16,I,France,Senegal,pendiente,,2-0,13.0,1-0 (12%)  ·  1-1 (10%),66.9,21.0,12.0,2.02,0.73,"Kylian Mbappé, Randal Kolo Muani","Sadio Mané, Ismaïla Sarr",Victoria France 2-0
+2026-06-16,I,Iraq,Norway,pendiente,,0-2,12.8,0-1 (12%)  ·  1-1 (10%),12.7,21.6,65.8,0.75,1.98,"Aymen Hussein, Mohanad Ali","Erling Haaland, Alexander Sørloth",Victoria Norway 2-0 (visitante)
+2026-06-16,J,Argentina,Algeria,pendiente,,2-0,14.2,3-0 (13%)  ·  1-0 (10%),82.2,12.9,5.0,2.69,0.55,"Lionel Messi, Lautaro Martínez","Mohamed Amoura, Baghdad Bounedjah",Victoria Argentina 2-0
+2026-06-16,J,Austria,Jordan,pendiente,,2-0,12.8,1-0 (12%)  ·  1-1 (10%),65.4,21.7,12.9,1.96,0.75,"Marko Arnautović, Michael Gregoritsch","Yazan Al-Naimat, Musa Al-Taamari",Victoria Austria 2-0
+2026-06-17,K,Portugal,DR Congo,pendiente,,2-0,14.2,3-0 (13%)  ·  1-0 (10%),82.8,12.5,4.7,2.73,0.54,"Cristiano Ronaldo, Bruno Fernandes","Cédric Bakambu, Yoane Wissa",Victoria Portugal 2-0
+2026-06-17,K,Uzbekistan,Colombia,pendiente,,0-2,14.1,0-1 (12%)  ·  0-3 (11%),7.7,16.7,75.6,0.63,2.35,"Abbosbek Fayzullaev, Eldor Shomurodov","Luis Díaz, Luis Suárez",Victoria Colombia 2-0 (visitante)
+2026-06-17,L,England,Croatia,pendiente,,1-1,12.4,1-0 (12%)  ·  2-0 (11%),53.8,26.0,20.2,1.63,0.91,"Harry Kane, Bukayo Saka","Andrej Kramarić, Ivan Perišić",Empate 1-1
+2026-06-17,L,Ghana,Panama,pendiente,,0-2,13.1,0-1 (12%)  ·  1-1 (10%),11.9,20.9,67.3,0.73,2.03,"Jordan Ayew, Mohammed Kudus","Ismael Díaz, José Fajardo",Victoria Panama 2-0 (visitante)
+2026-06-18,A,Czech Republic,South Africa,pendiente,,1-1,12.6,1-0 (12%)  ·  2-0 (10%),52.3,26.4,21.3,1.59,0.93,"Patrik Schick, Tomáš Souček","Lyle Foster, Oswin Appollis",Empate 1-1
+2026-06-18,A,Mexico,South Korea,pendiente,,2-0,12.6,1-0 (12%)  ·  1-1 (11%),64.2,22.3,13.6,1.92,0.77,"Raúl Jiménez, César Montes","Son Heung-min, Lee Kang-in",Victoria Mexico 2-0
+2026-06-18,B,Switzerland,Bosnia and Herzegovina,pendiente,,2-0,14.2,3-0 (12%)  ·  1-0 (11%),78.8,14.9,6.3,2.51,0.59,"Breel Embolo, Zeki Amdouni","Edin Džeko, Ermedin Demirović",Victoria Switzerland 2-0
+2026-06-18,B,Canada,Qatar,pendiente,,2-0,14.2,3-0 (12%)  ·  1-0 (11%),79.8,14.3,5.9,2.56,0.58,"Jonathan David, Tajon Buchanan","Almoez Ali, Akram Afif",Victoria Canada 2-0
+2026-06-19,C,Scotland,Morocco,pendiente,,0-2,13.6,0-1 (12%)  ·  0-3 (10%),9.9,19.1,71.0,0.68,2.16,"Scott McTominay, John McGinn","Ayoub El Kaabi, Brahim Díaz",Victoria Morocco 2-0 (visitante)
+2026-06-19,C,Brazil,Haiti,pendiente,,3-0,14.1,4-0 (13%)  ·  2-0 (12%),92.3,6.1,1.6,3.58,0.41,"Raphinha, Vinícius Júnior","Duckens Nazon, Frantzdy Pierrot",Victoria Brazil 3-0
+2026-06-19,D,United States,Australia,pendiente,,1-0,12.5,1-1 (12%)  ·  2-0 (12%),58.6,24.4,17.0,1.76,0.84,"Jesús Ferreira, Folarin Balogun","Jackson Irvine, Craig Goodwin",Victoria United States 1-0
+2026-06-19,D,Turkey,Paraguay,pendiente,,1-1,12.4,1-0 (12%)  ·  2-0 (11%),53.7,26.0,20.2,1.63,0.91,"Kerem Aktürkoğlu, Hakan Çalhanoğlu","Julio Enciso, Antonio Sanabria",Empate 1-1
+2026-06-20,E,Germany,Ivory Coast,pendiente,,2-0,13.2,1-0 (12%)  ·  1-1 (10%),68.4,20.4,11.3,2.07,0.71,"Florian Wirtz, Kai Havertz","Franck Kessié, Amad Diallo",Victoria Germany 2-0
+2026-06-20,E,Ecuador,Curaçao,pendiente,,2-0,14.0,3-0 (13%)  ·  1-0 (10%),84.5,11.4,4.1,2.84,0.52,"Enner Valencia, Félix Torres","Gervane Kastaneer, Kenji Gorré",Victoria Ecuador 2-0
+2026-06-20,F,Netherlands,Sweden,pendiente,,2-0,14.1,1-0 (12%)  ·  3-0 (11%),75.8,16.6,7.6,2.36,0.62,"Cody Gakpo, Memphis Depay","Viktor Gyökeres, Alexander Isak",Victoria Netherlands 2-0
+2026-06-20,F,Tunisia,Japan,pendiente,,0-2,13.8,0-1 (12%)  ·  0-3 (10%),9.2,18.4,72.4,0.67,2.22,"Mohamed Ali Ben Romdhane, Elias Achouri","Ayase Ueda, Takumi Minamino",Victoria Japan 2-0 (visitante)
+2026-06-21,G,Belgium,Iran,pendiente,,1-1,12.6,1-0 (12%)  ·  2-0 (10%),51.6,26.6,21.8,1.57,0.94,"Romelu Lukaku, Kevin De Bruyne","Mehdi Taremi, Sardar Azmoun",Empate 1-1
+2026-06-21,G,New Zealand,Egypt,pendiente,,0-2,12.5,0-1 (13%)  ·  1-1 (11%),13.7,22.3,64.0,0.77,1.92,"Chris Wood, Ben Waine","Mohamed Salah, Trézéguet",Victoria Egypt 2-0 (visitante)
+2026-06-21,H,Spain,Saudi Arabia,pendiente,,4-0,13.7,5-0 (13%)  ·  3-0 (12%),97.0,2.5,0.5,4.55,0.32,"Mikel Oyarzabal, Mikel Merino","Firas Al-Buraikan, Saleh Al-Shehri",Victoria Spain 4-0
+2026-06-21,H,Uruguay,Cape Verde,pendiente,,2-0,14.1,3-0 (13%)  ·  1-0 (10%),83.1,12.3,4.6,2.75,0.54,"Darwin Núñez, Giorgian de Arrascaeta","Dailon Livramento, Jamiro Monteiro",Victoria Uruguay 2-0
+2026-06-22,I,France,Iraq,pendiente,,3-0,14.0,4-0 (13%)  ·  2-0 (11%),93.5,5.2,1.3,3.76,0.39,"Kylian Mbappé, Randal Kolo Muani","Aymen Hussein, Mohanad Ali",Victoria France 3-0
+2026-06-22,I,Norway,Senegal,pendiente,,1-1,13.4,0-1 (11%)  ·  0-0 (9%),27.9,28.3,43.8,1.06,1.39,"Erling Haaland, Alexander Sørloth","Sadio Mané, Ismaïla Sarr",Empate 1-1
+2026-06-22,J,Argentina,Austria,pendiente,,2-0,14.2,3-0 (12%)  ·  1-0 (11%),78.3,15.1,6.5,2.48,0.59,"Lionel Messi, Lautaro Martínez","Marko Arnautović, Michael Gregoritsch",Victoria Argentina 2-0
+2026-06-22,J,Jordan,Algeria,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (11%),15.8,23.8,60.4,0.81,1.81,"Yazan Al-Naimat, Musa Al-Taamari","Mohamed Amoura, Baghdad Bounedjah",Victoria Algeria 1-0 (visitante)
+2026-06-23,K,Portugal,Uzbekistan,pendiente,,2-0,14.2,3-0 (13%)  ·  1-0 (10%),81.4,13.3,5.3,2.65,0.56,"Cristiano Ronaldo, Bruno Fernandes","Abbosbek Fayzullaev, Eldor Shomurodov",Victoria Portugal 2-0
+2026-06-23,K,Colombia,DR Congo,pendiente,,2-0,14.2,3-0 (11%)  ·  1-0 (11%),77.1,15.9,7.0,2.42,0.61,"Luis Díaz, Luis Suárez","Cédric Bakambu, Yoane Wissa",Victoria Colombia 2-0
+2026-06-23,L,England,Ghana,pendiente,,4-0,13.8,3-0 (13%)  ·  5-0 (12%),95.8,3.4,0.7,4.22,0.35,"Harry Kane, Bukayo Saka","Jordan Ayew, Mohammed Kudus",Victoria England 4-0
+2026-06-23,L,Panama,Croatia,pendiente,,0-1,12.5,0-2 (12%)  ·  1-1 (11%),14.3,22.8,62.9,0.78,1.88,"Ismael Díaz, José Fajardo","Andrej Kramarić, Ivan Perišić",Victoria Croatia 1-0 (visitante)
+2026-06-24,A,Mexico,Czech Republic,pendiente,,2-0,14.2,3-0 (12%)  ·  1-0 (11%),80.5,13.9,5.6,2.6,0.57,"Raúl Jiménez, César Montes","Patrik Schick, Tomáš Souček",Victoria Mexico 2-0
+2026-06-24,A,South Africa,South Korea,pendiente,,0-2,13.6,0-1 (12%)  ·  0-3 (10%),10.1,19.3,70.7,0.69,2.15,"Lyle Foster, Oswin Appollis","Son Heung-min, Lee Kang-in",Victoria South Korea 2-0 (visitante)
+2026-06-24,B,Canada,Switzerland,pendiente,,1-1,13.7,0-1 (10%)  ·  1-0 (10%),33.9,28.9,37.2,1.18,1.25,"Jonathan David, Tajon Buchanan","Breel Embolo, Zeki Amdouni",Empate 1-1
+2026-06-24,B,Bosnia and Herzegovina,Qatar,pendiente,,1-1,13.7,1-0 (10%)  ·  0-0 (10%),38.4,28.8,32.7,1.27,1.16,"Edin Džeko, Ermedin Demirović","Almoez Ali, Akram Afif",Empate 1-1
+2026-06-24,C,Scotland,Brazil,pendiente,,0-2,14.1,0-1 (11%)  ·  0-3 (11%),7.5,16.4,76.1,0.62,2.37,"Scott McTominay, John McGinn","Raphinha, Vinícius Júnior",Victoria Brazil 2-0 (visitante)
+2026-06-24,C,Morocco,Haiti,pendiente,,3-0,14.1,2-0 (13%)  ·  4-0 (11%),89.5,8.0,2.4,3.26,0.45,"Ayoub El Kaabi, Brahim Díaz","Duckens Nazon, Frantzdy Pierrot",Victoria Morocco 3-0
+2026-06-25,D,United States,Turkey,pendiente,,1-1,12.5,1-0 (12%)  ·  2-0 (10%),52.9,26.3,20.9,1.61,0.92,"Jesús Ferreira, Folarin Balogun","Kerem Aktürkoğlu, Hakan Çalhanoğlu",Empate 1-1
+2026-06-25,D,Paraguay,Australia,pendiente,,1-1,13.1,0-1 (12%)  ·  0-2 (9%),24.5,27.5,48.0,0.99,1.49,"Julio Enciso, Antonio Sanabria","Jackson Irvine, Craig Goodwin",Empate 1-1
+2026-06-25,E,Curaçao,Ivory Coast,pendiente,,0-2,13.4,0-1 (12%)  ·  1-1 (9%),10.7,19.8,69.5,0.7,2.11,"Gervane Kastaneer, Kenji Gorré","Franck Kessié, Amad Diallo",Victoria Ivory Coast 2-0 (visitante)
+2026-06-25,E,Ecuador,Germany,pendiente,,1-1,12.9,0-1 (12%)  ·  0-2 (10%),23.1,27.1,49.8,0.96,1.53,"Enner Valencia, Félix Torres","Florian Wirtz, Kai Havertz",Empate 1-1
+2026-06-25,F,Japan,Sweden,pendiente,,2-0,12.9,1-0 (12%)  ·  1-1 (10%),66.0,21.5,12.6,1.98,0.74,"Ayase Ueda, Takumi Minamino","Viktor Gyökeres, Alexander Isak",Victoria Japan 2-0
+2026-06-25,F,Tunisia,Netherlands,pendiente,,0-2,14.2,0-3 (13%)  ·  0-1 (10%),5.3,13.4,81.3,0.56,2.64,"Mohamed Ali Ben Romdhane, Elias Achouri","Cody Gakpo, Memphis Depay",Victoria Netherlands 2-0 (visitante)
+2026-06-26,G,Egypt,Iran,pendiente,,1-1,13.0,0-1 (12%)  ·  0-2 (9%),24.3,27.5,48.3,0.99,1.49,"Mohamed Salah, Trézéguet","Mehdi Taremi, Sardar Azmoun",Empate 1-1
+2026-06-26,G,New Zealand,Belgium,pendiente,,0-3,13.8,0-2 (14%)  ·  0-4 (11%),3.1,9.5,87.4,0.48,3.06,"Chris Wood, Ben Waine","Romelu Lukaku, Kevin De Bruyne",Victoria Belgium 3-0 (visitante)
+2026-06-26,H,Cape Verde,Saudi Arabia,pendiente,,1-1,13.6,0-1 (11%)  ·  0-0 (9%),31.2,28.7,40.1,1.13,1.31,"Dailon Livramento, Jamiro Monteiro","Firas Al-Buraikan, Saleh Al-Shehri",Empate 1-1
+2026-06-26,H,Uruguay,Spain,pendiente,,0-2,13.6,0-1 (12%)  ·  0-3 (10%),9.8,19.0,71.2,0.68,2.17,"Darwin Núñez, Giorgian de Arrascaeta","Mikel Oyarzabal, Mikel Merino",Victoria Spain 2-0 (visitante)
+2026-06-26,I,Norway,France,pendiente,,0-2,14.0,0-1 (12%)  ·  0-3 (11%),8.1,17.2,74.7,0.64,2.31,"Erling Haaland, Alexander Sørloth","Kylian Mbappé, Randal Kolo Muani",Victoria France 2-0 (visitante)
+2026-06-26,I,Senegal,Iraq,pendiente,,2-0,13.9,1-0 (12%)  ·  3-0 (10%),73.6,17.8,8.6,2.27,0.65,"Sadio Mané, Ismaïla Sarr","Aymen Hussein, Mohanad Ali",Victoria Senegal 2-0
+2026-06-27,J,Algeria,Austria,pendiente,,1-1,13.6,0-1 (11%)  ·  0-0 (9%),30.9,28.7,40.4,1.12,1.32,"Mohamed Amoura, Baghdad Bounedjah","Marko Arnautović, Michael Gregoritsch",Empate 1-1
+2026-06-27,J,Jordan,Argentina,pendiente,,0-4,13.6,0-3 (14%)  ·  0-5 (11%),0.9,4.1,94.9,0.37,4.01,"Yazan Al-Naimat, Musa Al-Taamari","Lionel Messi, Lautaro Martínez",Victoria Argentina 4-0 (visitante)
+2026-06-27,K,Colombia,Portugal,pendiente,,1-1,13.5,0-1 (11%)  ·  0-0 (9%),28.8,28.4,42.7,1.08,1.37,"Luis Díaz, Luis Suárez","Cristiano Ronaldo, Bruno Fernandes",Empate 1-1
+2026-06-27,K,DR Congo,Uzbekistan,pendiente,,1-1,13.7,0-1 (10%)  ·  1-0 (10%),33.8,28.9,37.3,1.18,1.25,"Cédric Bakambu, Yoane Wissa","Abbosbek Fayzullaev, Eldor Shomurodov",Empate 1-1
+2026-06-27,L,Panama,England,pendiente,,0-2,14.2,0-3 (12%)  ·  0-1 (11%),6.1,14.6,79.2,0.58,2.53,"Ismael Díaz, José Fajardo","Harry Kane, Bukayo Saka",Victoria England 2-0 (visitante)
+2026-06-27,L,Croatia,Ghana,pendiente,,3-0,14.0,2-0 (13%)  ·  4-0 (11%),88.4,8.9,2.8,3.14,0.47,"Andrej Kramarić, Ivan Perišić","Jordan Ayew, Mohammed Kudus",Victoria Croatia 3-0

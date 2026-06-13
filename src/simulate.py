@@ -64,7 +64,7 @@ def _bipartite_match(slots, eligible, qualifying):
 
 
 class TournamentSimulator:
-    def __init__(self, ratings, model, fixtures, n_sims, seed):
+    def __init__(self, ratings, model, fixtures, n_sims, seed, sigma=None):
         self.teams = all_teams()
         self.idx = {t: i for i, t in enumerate(self.teams)}
         self.nT = len(self.teams)
@@ -75,12 +75,13 @@ class TournamentSimulator:
         self.N = n_sims
         self.rng = np.random.default_rng(seed)
         self.rows = np.arange(n_sims)
-        self.fixtures = fixtures  # lista de dicts con grp, home, away, ha_side
+        self.fixtures = fixtures  # lista de dicts con grp, home, away, ha_points
 
+        sig = ELO_SIM_SIGMA if sigma is None else sigma
         # Nivel "real" de cada selección en cada simulación: Elo + ruido
         # gaussiano (incertidumbre de forma/lesiones/sorteo).
         self.elo_sim = (self.elo[None, :]
-                        + self.rng.normal(0.0, ELO_SIM_SIGMA, size=(n_sims, self.nT)))
+                        + self.rng.normal(0.0, sig, size=(n_sims, self.nT)))
 
         # cuenta de resultados
         self.cnt = {k: np.zeros(self.nT) for k in

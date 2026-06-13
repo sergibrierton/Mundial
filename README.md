@@ -69,6 +69,29 @@ automáticamente.
 
 ---
 
+## ✅ Fiabilidad y validación externa
+
+Para que la predicción sea **lo más fiable posible y sin sesgos**, el sistema
+no se fía de un solo método: se **ancla y valida con fuentes independientes**.
+
+- **Anclaje al Ranking Mundial FIFA** (oficial): los ratings propios se combinan
+  con los puntos/posición FIFA de las 48 selecciones. Corrige infravaloraciones
+  e inflados del Elo y lleva la cima a la paridad real.
+- **Calibración al consenso**: la incertidumbre del modelo (σ) se ajusta para
+  que la concentración de probabilidades de título coincida con el mercado de
+  apuestas y el supercomputador **Opta**, evitando la sobreconfianza.
+- **Consenso (ensemble)**: el pronóstico principal de campeón es la **media del
+  modelo propio + Opta + mercado** (`output/consensus_title.md`) — más fiable
+  que cualquier fuente aislada.
+- **Condicionado a la realidad**: los partidos ya jugados entran como hechos
+  (no se vuelven a predecir) y recalibran el Elo.
+- **Backtest honesto** (`output/backtest.md`): el modelo se evalúa con el Elo
+  **previo** a cada partido ya disputado (acierto 1-X-2, marcador exacto, Brier).
+
+> Sobre el marcador exacto: es de baja probabilidad por naturaleza (~12–18%).
+> El sistema **no arriesga** vendiéndolo como certeza; la unidad fiable es la
+> probabilidad 1-X-2 y el consenso.
+
 ## 🧠 Metodología de predicción
 
 1. **Ratings Elo** (estilo *World Football Elo*) calculados recorriendo
