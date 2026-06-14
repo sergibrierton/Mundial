@@ -1,0 +1,34 @@
+{
+  "name": "Film 35mm",
+  "description": "Pelicula analogica calida y desvaida (estilo Portra/Kodachrome). Negros levantados (efecto 'mate'), colores suaves, grano fino y tonos calidos. Nostalgia 90s/2000s, muy de moda y con sensacion premium-autentica.",
+
+  "auto_white_balance": true,
+  "auto_white_balance_strength": 0.6,
+  "auto_exposure": true,
+  "auto_exposure_target": 0.46,
+  "auto_exposure_strength": 0.6,
+
+  "exposure": 0.05,
+  "temp": 10,
+  "tint": 3,
+  "contrast": 8,
+  "highlights": -16,
+  "shadows": 18,
+  "whites": -4,
+  "blacks": 8,
+  "vibrance": 8,
+  "saturation": -6,
+
+  "split_shadows": [0.42, 0.45, 0.38],
+  "split_shadows_strength": 0.07,
+  "split_highlights": [1.0, 0.90, 0.70],
+  "split_highlights_strength": 0.08,
+
+  "tone_curve": [[0.0, 0.06], [0.25, 0.26], [0.5, 0.52], [0.75, 0.78], [1.0, 0.94]],
+  "vignette": 0.12,
+  "grain": 0.045,
+
+  "lut": null,
+  "lut_strength": 1.0,
+  "sharpen": 0.5
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Cyberpunk Neon",
+  "description": "Estetica cyberpunk: cian en sombras y magenta en luces, mucho color y contraste. NO neutraliza el color de las luces de la disco (lo potencia). Muy llamativo y con identidad fuerte para feed y video.",
+
+  "auto_white_balance": false,
+  "auto_white_balance_strength": 0.0,
+  "auto_exposure": true,
+  "auto_exposure_target": 0.40,
+  "auto_exposure_strength": 0.5,
+
+  "exposure": 0.0,
+  "temp": -6,
+  "tint": 6,
+  "contrast": 26,
+  "highlights": -8,
+  "shadows": 10,
+  "whites": 8,
+  "blacks": -16,
+  "vibrance": 30,
+  "saturation": 12,
+
+  "split_shadows": [0.15, 0.45, 0.75],
+  "split_shadows_strength": 0.14,
+  "split_highlights": [0.95, 0.55, 0.85],
+  "split_highlights_strength": 0.10,
+
+  "tone_curve": [[0.0, 0.01], [0.25, 0.20], [0.5, 0.5], [0.75, 0.81], [1.0, 0.99]],
+  "vignette": 0.20,
+  "grain": 0.03,
+
+  "lut": null,
+  "lut_strength": 1.0,
+  "sharpen": 0.7
+}

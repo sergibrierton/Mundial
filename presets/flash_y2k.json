@@ -1,0 +1,34 @@
+{
+  "name": "Flash Y2K",
+  "description": "Look de flash directo / camara digital de los 2000 (digicam). LA tendencia ahora en discotecas: contraste punzante, sombras profundas, color rico, brillo calido en luces y grano digital. Maximo engagement y aire autentico de pista.",
+
+  "auto_white_balance": true,
+  "auto_white_balance_strength": 0.5,
+  "auto_exposure": true,
+  "auto_exposure_target": 0.38,
+  "auto_exposure_strength": 0.6,
+
+  "exposure": 0.0,
+  "temp": 6,
+  "tint": -2,
+  "contrast": 28,
+  "highlights": -10,
+  "shadows": -14,
+  "whites": 12,
+  "blacks": -22,
+  "vibrance": 28,
+  "saturation": 6,
+
+  "split_shadows": [0.22, 0.30, 0.42],
+  "split_shadows_strength": 0.06,
+  "split_highlights": [1.0, 0.86, 0.62],
+  "split_highlights_strength": 0.10,
+
+  "tone_curve": [[0.0, 0.0], [0.2, 0.13], [0.5, 0.5], [0.8, 0.86], [1.0, 1.0]],
+  "vignette": 0.22,
+  "grain": 0.05,
+
+  "lut": null,
+  "lut_strength": 1.0,
+  "sharpen": 0.8
+}
