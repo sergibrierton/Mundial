@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mundial Studio</title>
+  <link rel="stylesheet" href="/webui/style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">🎛️ Mundial <span>Studio</span></div>
+    <div class="folderbar">
+      <input id="folder" type="text" placeholder="Pega aquí la ruta de la carpeta de fotos/vídeos…" />
+      <button id="openBtn">Abrir</button>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-kind="photo">Fotos</button>
+      <button class="tab" data-kind="video">Vídeo</button>
+    </div>
+    <button id="exportBtn" class="primary">Exportar carpeta…</button>
+  </header>
+
+  <main>
+    <!-- Lista de archivos -->
+    <aside id="filelist" class="panel left">
+      <div class="hint">Abre una carpeta para empezar.</div>
+    </aside>
+
+    <!-- Previsualización -->
+    <section class="preview-wrap">
+      <div id="stage" class="stage">
+        <img id="preview" alt="previsualización" />
+        <div id="wm" class="wm hidden"></div>
+        <div id="loading" class="loading hidden">render…</div>
+      </div>
+
+      <div id="videobar" class="videobar hidden">
+        <label>t <input id="vtime" type="range" min="0" max="100" value="0" step="0.1" /></label>
+        <span id="vtimelbl">0.0s</span>
+        <div class="trim">
+          <label>Recorte ini <input id="trimStart" type="number" step="0.1" value="0" /></label>
+          <label>fin <input id="trimEnd" type="number" step="0.1" value="0" /></label>
+          <button id="bestSeg" class="ghost">Mejor tramo ✨</button>
+          <span id="vscore" class="score"></span>
+        </div>
+      </div>
+
+      <div id="refstrip" class="refstrip"></div>
+    </section>
+
+    <!-- Controles -->
+    <aside class="panel right">
+      <div class="section">
+        <div class="section-h">Presets / LUT</div>
+        <div id="presets" class="presets"></div>
+        <div class="row">
+          <input id="presetName" type="text" placeholder="Nombre del preset" />
+          <button id="savePreset" class="ghost">Guardar preset</button>
+        </div>
+        <button id="exportLut" class="ghost wide">Exportar como LUT .cube</button>
+      </div>
+
+      <div class="section">
+        <div class="section-h">Ajustes <button id="resetBtn" class="mini">reset</button></div>
+        <div class="toggles">
+          <label><input type="checkbox" id="auto_white_balance" /> Balance auto</label>
+          <label><input type="checkbox" id="auto_exposure" /> Exposición auto</label>
+        </div>
+        <div id="sliders"></div>
+        <div class="split">
+          <div><span>Tinte sombras</span>
+            <input type="color" id="split_shadows" value="#2e3b66" />
+            <input type="range" id="split_shadows_strength" min="0" max="0.4" step="0.01" value="0" />
+          </div>
+          <div><span>Tinte luces</span>
+            <input type="color" id="split_highlights" value="#ffd28c" />
+            <input type="range" id="split_highlights_strength" min="0" max="0.4" step="0.01" value="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-h">Marca de agua</div>
+        <div class="row wmtype">
+          <label><input type="radio" name="wmtype" value="none" checked /> Ninguna</label>
+          <label><input type="radio" name="wmtype" value="logo" /> Logo</label>
+          <label><input type="radio" name="wmtype" value="text" /> Texto</label>
+        </div>
+        <div id="wmLogoRow" class="row hidden">
+          <input type="file" id="logoFile" accept="image/png,image/webp" />
+        </div>
+        <div id="wmTextRow" class="row hidden">
+          <input type="text" id="wmText" placeholder="MUNDIAL CLUB" />
+        </div>
+        <div id="wmOpts" class="wmopts hidden">
+          <label>Tamaño <input type="range" id="wmScale" min="0.04" max="0.5" step="0.01" value="0.16" /></label>
+          <label>Opacidad <input type="range" id="wmOpacity" min="0.1" max="1" step="0.05" value="0.85" /></label>
+          <div class="row">
+            <select id="wmPos">
+              <option value="br">Abajo dcha.</option>
+              <option value="bl">Abajo izq.</option>
+              <option value="tr">Arriba dcha.</option>
+              <option value="tl">Arriba izq.</option>
+              <option value="center">Centro</option>
+            </select>
+            <span class="hint">…o arrástrala sobre la imagen</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-h">Vídeo / Formato</div>
+        <label class="block">Reencuadre
+          <select id="aspect">
+            <option value="keep">Original</option>
+            <option value="reel">Reel / Story 9:16</option>
+            <option value="feed">Feed 4:5</option>
+            <option value="square">Cuadrado 1:1</option>
+            <option value="landscape">Horizontal 16:9</option>
+          </select>
+        </label>
+        <label class="block">Relleno
+          <select id="fit">
+            <option value="crop">Recortar al centro</option>
+            <option value="pad">Fondo desenfocado</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="section">
+        <div class="section-h">Esta toma</div>
+        <div class="row">
+          <button id="saveOverride" class="ghost">Guardar retoque de ESTA</button>
+          <button id="clearOverride" class="mini">quitar</button>
+        </div>
+        <button id="refUpload" class="ghost wide">Añadir referencia de estilo</button>
+        <input type="file" id="refFile" accept="image/*" class="hidden" />
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal export -->
+  <div id="exportModal" class="modal hidden">
+    <div class="modal-box">
+      <h3>Exportar carpeta</h3>
+      <label class="block">Carpeta de salida
+        <input id="outFolder" type="text" placeholder="(por defecto: …/editadas)" />
+      </label>
+      <div id="exportPhotoOpts">
+        <label class="block">Tamaño máx (px) <input id="maxSize" type="number" value="2048" /></label>
+        <label class="block">Calidad JPEG <input id="quality" type="number" value="90" /></label>
+      </div>
+      <p class="hint">Se exportan todos los archivos de la pestaña actual con el look y los
+        retoques individuales que hayas guardado.</p>
+      <div id="exportProgress" class="progress hidden">
+        <div class="bar"><div id="bar"></div></div>
+        <div id="exportMsg" class="hint"></div>
+      </div>
+      <div class="row end">
+        <button id="exportCancel" class="ghost">Cerrar</button>
+        <button id="exportRun" class="primary">Exportar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/webui/app.js"></script>
+</body>
+</html>

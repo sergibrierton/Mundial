@@ -6,7 +6,10 @@ venv/
 # Salidas y material de trabajo
 editadas/
 seleccionadas/
+videos_editados/
 test_*/
+assets/_referencias/
+**/_look.cube
 *.ARW
 *.arw
 *.jpg

@@ -24,17 +24,12 @@ def _downscale(arr: np.ndarray, max_size: int) -> np.ndarray:
     return np.asarray(im, dtype=np.float32) / 255.0
 
 
-def apply_look(arr: np.ndarray, preset: dict, lut: CubeLUT | None,
-               seed: int = 0) -> np.ndarray:
-    """Aplica correcciones automaticas + preset a un array float [0,1]."""
+def apply_color_look(arr: np.ndarray, preset: dict,
+                     lut: CubeLUT | None = None) -> np.ndarray:
+    """Solo los ajustes de COLOR/TONO del preset (sin auto-correccion ni
+    efectos espaciales). Es la parte que se puede hornear en un LUT .cube
+    para que foto y video compartan exactamente el mismo look."""
     p = preset
-
-    if p.get("auto_white_balance"):
-        arr = adj.auto_white_balance(arr, p.get("auto_white_balance_strength", 0.8))
-    if p.get("auto_exposure"):
-        arr = adj.auto_exposure(arr, p.get("auto_exposure_target", 0.42),
-                                p.get("auto_exposure_strength", 0.7))
-
     arr = adj.exposure(arr, p.get("exposure", 0.0))
     arr = adj.temp_tint(arr, p.get("temp", 0.0), p.get("tint", 0.0))
     arr = adj.tone_regions(arr, p.get("highlights", 0.0), p.get("shadows", 0.0),
@@ -47,9 +42,23 @@ def apply_look(arr: np.ndarray, preset: dict, lut: CubeLUT | None,
                          p.get("split_shadows_strength", 0.0),
                          p.get("split_highlights"),
                          p.get("split_highlights_strength", 0.0))
-
     if lut is not None:
         arr = lut.apply(arr, p.get("lut_strength", 1.0))
+    return np.clip(arr, 0.0, 1.0)
+
+
+def apply_look(arr: np.ndarray, preset: dict, lut: CubeLUT | None,
+               seed: int = 0) -> np.ndarray:
+    """Aplica correcciones automaticas + preset a un array float [0,1]."""
+    p = preset
+
+    if p.get("auto_white_balance"):
+        arr = adj.auto_white_balance(arr, p.get("auto_white_balance_strength", 0.8))
+    if p.get("auto_exposure"):
+        arr = adj.auto_exposure(arr, p.get("auto_exposure_target", 0.42),
+                                p.get("auto_exposure_strength", 0.7))
+
+    arr = apply_color_look(arr, preset, lut)
 
     arr = adj.vignette(arr, p.get("vignette", 0.0))
     arr = adj.grain(arr, p.get("grain", 0.0), seed=seed)
@@ -79,13 +88,14 @@ def process_image(in_path: str, out_path: str, preset: dict,
 
 
 def _apply_watermark(im: Image.Image, wm: dict) -> Image.Image:
+    xy = wm.get("xy")
     if wm.get("logo"):
         return watermark.apply_logo(
             im, wm["logo"],
             scale=wm.get("scale", 0.18),
             opacity=wm.get("opacity", 0.85),
             position=wm.get("position", "br"),
-            margin=wm.get("margin", 0.035))
+            margin=wm.get("margin", 0.035), xy=xy)
     if wm.get("text"):
         return watermark.apply_text(
             im, wm["text"],
@@ -93,5 +103,5 @@ def _apply_watermark(im: Image.Image, wm: dict) -> Image.Image:
             opacity=wm.get("opacity", 0.85),
             position=wm.get("position", "br"),
             margin=wm.get("margin", 0.035),
-            font_path=wm.get("font"))
+            font_path=wm.get("font"), xy=xy)
     return im

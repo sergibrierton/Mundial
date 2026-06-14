@@ -21,8 +21,11 @@ def _xy(pos, base_w, base_h, mark_w, mark_h, margin_px):
 
 def apply_logo(im: Image.Image, logo_path: str, scale: float = 0.18,
                opacity: float = 0.85, position: str = "br",
-               margin: float = 0.035) -> Image.Image:
-    """Pega un logo PNG escalado a `scale` (fraccion del ancho)."""
+               margin: float = 0.035, xy=None) -> Image.Image:
+    """Pega un logo PNG escalado a `scale` (fraccion del ancho).
+
+    Si `xy` es (rel_x, rel_y) en [0,1] (esquina superior izq del logo
+    relativa a la imagen), se usa esa posicion libre (arrastrar en la UI)."""
     base = im.convert("RGBA")
     logo = Image.open(logo_path).convert("RGBA")
 
@@ -35,9 +38,13 @@ def apply_logo(im: Image.Image, logo_path: str, scale: float = 0.18,
         alpha = logo.split()[3].point(lambda a: int(a * opacity))
         logo.putalpha(alpha)
 
-    margin_px = int(base.width * margin)
-    x, y = _xy(position, base.width, base.height,
-               logo.width, logo.height, margin_px)
+    if xy is not None:
+        x = int(xy[0] * base.width)
+        y = int(xy[1] * base.height)
+    else:
+        margin_px = int(base.width * margin)
+        x, y = _xy(position, base.width, base.height,
+                   logo.width, logo.height, margin_px)
     base.alpha_composite(logo, (x, y))
     return base.convert("RGB")
 
@@ -45,7 +52,7 @@ def apply_logo(im: Image.Image, logo_path: str, scale: float = 0.18,
 def apply_text(im: Image.Image, text: str, scale: float = 0.045,
                opacity: float = 0.85, position: str = "br",
                margin: float = 0.035, font_path: str | None = None,
-               color=(255, 255, 255)) -> Image.Image:
+               color=(255, 255, 255), xy=None) -> Image.Image:
     """Marca de agua de texto (si no hay logo). `scale` = altura relativa."""
     base = im.convert("RGBA")
     overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
@@ -66,9 +73,13 @@ def apply_text(im: Image.Image, text: str, scale: float = 0.045,
 
     bbox = draw.textbbox((0, 0), text, font=font)
     tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-    margin_px = int(base.width * margin)
-    x, y = _xy(position, base.width, base.height, tw, th, margin_px)
-    y -= bbox[1]
+    if xy is not None:
+        x = int(xy[0] * base.width)
+        y = int(xy[1] * base.height) - bbox[1]
+    else:
+        margin_px = int(base.width * margin)
+        x, y = _xy(position, base.width, base.height, tw, th, margin_px)
+        y -= bbox[1]
 
     a = int(255 * opacity)
     # sombra sutil para que se lea sobre cualquier fondo

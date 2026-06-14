@@ -1,17 +1,45 @@
-# Mundial — Edición fotográfica automática
+# Mundial — Edición automática de fotos y vídeo
 
-Sistema para **editar por lotes** las fotos de la discoteca: le pasas una
-carpeta con las fotos **sin editar** (RAW `.ARW` de tu Sony o JPEG) y te
-devuelve **JPEG editados con un estilo consistente**, listos para publicar,
-con la **marca de agua** de la discoteca si quieres. Además puede **elegir
-automáticamente la mejor foto de cada ráfaga**.
+Sistema para **editar por lotes** el material de la discoteca: le pasas una
+carpeta con **fotos** (RAW `.ARW` de tu Sony o JPEG) y **vídeos** sin editar
+y te devuelve material **con un estilo consistente**, listo para publicar,
+con **marca de agua** si quieres. Elige **automáticamente la mejor toma** de
+cada ráfaga/clip, y trae una **interfaz visual** para ajustar el look a ojo.
 
-Dos herramientas que puedes usar juntas o por separado:
+Fotos y vídeos comparten **exactamente el mismo color** porque el look del
+preset se exporta a un **LUT `.cube`** que se aplica a ambos.
 
 | Herramienta | Qué hace |
 |-------------|----------|
-| `cull.py` | Detecta fotos parecidas (ráfagas) y **elige la mejor** de cada grupo (enfoque, exposición, encuadre, caras centradas). |
-| `auto_edit.py` | Aplica el **look/preset** a toda la carpeta, opcional **marca de agua**, y exporta JPEG listos. Puede hacer la selección antes con `--cull`. |
+| `app.py` | **Interfaz visual** (app web local): prueba presets/LUTs en vivo, coloca la marca de agua arrastrándola, corrige foto/vídeo individualmente y exporta. |
+| `auto_edit.py` | Edita fotos por lotes con preset + marca de agua. `--cull` selecciona la mejor de cada ráfaga. |
+| `cull.py` | Solo selección: elige la mejor foto de cada ráfaga (enfoque, exposición, encuadre, caras). |
+| `video_edit.py` | Edita vídeos por lotes: look (LUT), reencuadre a redes (Reel/feed/cuadrado), recorte del mejor tramo, descarte de clips malos y marca de agua. |
+| `make_lut.py` | Exporta un preset a LUT `.cube` (para vídeo o cualquier editor). |
+
+---
+
+## 🖥️ 0. Interfaz visual (lo más cómodo)
+
+```bash
+pip install -r requirements.txt
+python app.py        # abre http://127.0.0.1:5000 en tu navegador
+```
+
+En la app puedes:
+- Pegar la **ruta de tu carpeta** y ver fotos y vídeos.
+- Probar **presets/LUTs en vivo** sobre tus fotos o **referencias** que subas,
+  para decidir el estilo de la discoteca.
+- **Arrastrar la marca de agua** (logo o texto) a donde quieras, con tamaño y
+  opacidad.
+- **Corregir cualquier ajuste** (exposición, color, contraste, viñeta…) de una
+  foto o vídeo concreto y **guardar ese retoque** solo para esa toma.
+- En vídeo: elegir **formato** (Reel 9:16, feed 4:5…) y **recorte** (con botón
+  “mejor tramo ✨”).
+- **Guardar tu propio preset** y **exportar** toda la carpeta con un clic.
+
+Las herramientas de línea de comandos de abajo hacen lo mismo de forma
+automática/masiva.
 
 ---
 
@@ -173,15 +201,51 @@ con algún corte, ajusta `--hash-thresh` (más bajo = grupos más estrictos).
 
 ---
 
+## 🎬 8. Vídeo (mismo look que las fotos)
+
+El look del preset se hornea en un **LUT `.cube`** y se aplica al vídeo con
+ffmpeg, así fotos y vídeos quedan **idénticos de color**.
+
+```bash
+# Reels verticales con el look neon, recorte del mejor tramo y logo
+python video_edit.py -i ./videos -o ./videos_editados \
+    --preset presets/mundial_neon.json --aspect reel \
+    --cull --auto-trim --logo assets/logo.png
+```
+
+- `--aspect` → `reel`/`story`/`tiktok` (9:16), `feed` (4:5), `square` (1:1),
+  `landscape` (16:9) o `keep` (original).
+- `--fit crop` recorta al centro; `--fit pad` rellena con fondo desenfocado.
+- `--cull` analiza y **descarta clips malos** (movidos/desenfocados/oscuros);
+  ajusta el listón con `--min-score`.
+- `--auto-trim` recorta cada clip a **su mejor tramo**.
+- Marca de agua igual que en fotos (`--logo` / `--text` …).
+- Genera un informe `analisis_video.csv` con la nota de cada clip.
+
+> Necesita **ffmpeg**. Si no lo tienes en el sistema, `pip install
+> imageio-ffmpeg` (ya está en `requirements.txt`) trae uno listo.
+
+Exportar solo el LUT (para usarlo en DaVinci/Premiere/Lightroom):
+
+```bash
+python make_lut.py --preset presets/mundial_neon.json -o assets/neon.cube
+```
+
+---
+
 ## 🗂️ Estructura del proyecto
 
 ```
 Mundial/
-├── auto_edit.py          # Editor por lotes (look + marca de agua [+ --cull])
+├── app.py                # Interfaz visual (app web local)
+├── webui/                # Frontend de la interfaz (HTML/CSS/JS)
+├── auto_edit.py          # Editor de FOTOS por lotes (look + marca [+ --cull])
 ├── cull.py               # Selección de la mejor foto de cada ráfaga
+├── video_edit.py         # Editor de VÍDEO por lotes (LUT + reencuadre + cull)
+├── make_lut.py           # Exporta un preset a LUT .cube
 ├── presets/              # Estilos (.json)
 ├── assets/               # Pon aquí tu logo.png / LUTs .cube
-├── editor/               # Motor (carga RAW/JPEG, ajustes, LUT, caras...)
+├── editor/               # Motor (RAW/JPEG, ajustes, LUT, caras, vídeo...)
 └── requirements.txt
 ```
 
