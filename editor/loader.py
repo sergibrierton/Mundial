@@ -7,13 +7,22 @@ import os
 import numpy as np
 from PIL import Image, ImageOps
 
-# Extensiones RAW habituales (Sony usa .ARW).
+# Soporte HEIC/HEIF (fotos de iPhone). Si no esta instalado, el resto sigue.
+try:
+    from pillow_heif import register_heif_opener
+    register_heif_opener()
+    _HAS_HEIF = True
+except Exception:  # noqa: BLE001
+    _HAS_HEIF = False
+
+# Extensiones RAW habituales (Sony usa .ARW; iPhone ProRAW usa .DNG).
 RAW_EXTS = {
     ".arw", ".sr2", ".srf",          # Sony
     ".cr2", ".cr3", ".nef", ".raf",  # otras marcas, por si acaso
     ".rw2", ".orf", ".dng", ".pef",
 }
-JPEG_EXTS = {".jpg", ".jpeg", ".png", ".tif", ".tiff", ".webp", ".bmp"}
+JPEG_EXTS = {".jpg", ".jpeg", ".png", ".tif", ".tiff", ".webp", ".bmp",
+             ".heic", ".heif"}      # iPhone: HEIC/HEIF
 
 SUPPORTED_EXTS = RAW_EXTS | JPEG_EXTS
 
